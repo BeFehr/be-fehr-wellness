@@ -31,7 +31,7 @@
                 gold: '#d8b06d',
                 ink: '#142c38',
                 muted: '#5d6d78',
-                line: '#d6d2cd',
+                line: '#d8d0c9',
                 footer: '#102a39'
               }
             },
@@ -46,24 +46,22 @@
     <style>
       :root {
         --bg: #f5efe9;
-        --panel: #faf5f2;
-        --ink: #132d3a;
-        --ink-soft: #5a6470;
+        --panel: #f8f3ef;
+        --ink: #152c37;
+        --ink-soft: #586874;
         --orange: #ee7d58;
-        --orange-soft: #f4b98a;
-        --orange-deep: #d96e47;
-        --blue: #1d4d6f;
-        --blue-soft: #7db0c8;
-        --gold: #d4a968;
-        --line: #d9d2cc;
+        --orange-soft: #f4ba96;
+        --orange-deep: #d96d47;
+        --blue: #204d73;
+        --blue-soft: #7fb0c9;
+        --gold: #d4aa67;
+        --line: #d9d2cd;
         --navy: #102a39;
         --shadow: rgba(17, 34, 41, 0.08);
       }
 
       * { box-sizing: border-box; }
-
       html { scroll-behavior: smooth; }
-
       body {
         margin: 0;
         background: var(--bg);
@@ -72,21 +70,20 @@
         -webkit-font-smoothing: antialiased;
         text-rendering: optimizeLegibility;
       }
-
       a { text-decoration: none; }
       button { font: inherit; }
 
       .container {
-        max-width: 1460px;
+        max-width: 1500px;
         margin: 0 auto;
-        padding: 0 18px;
+        padding: 0 16px;
       }
 
       .site-header {
         position: sticky;
         top: 0;
         z-index: 100;
-        background: rgba(245, 239, 233, 0.92);
+        background: rgba(245, 239, 233, 0.94);
         backdrop-filter: blur(10px);
         border-bottom: 1px solid rgba(19, 45, 58, 0.04);
       }
@@ -95,8 +92,8 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        min-height: 82px;
-        gap: 24px;
+        min-height: 88px;
+        gap: 20px;
       }
 
       .brand-wrap {
@@ -113,23 +110,21 @@
         border-radius: 9999px;
         background: #0f1f2a;
         overflow: hidden;
+        box-shadow: inset 0 0 0 1px rgba(255,255,255,0.12);
       }
-
       .brand-mark::before,
       .brand-mark::after {
         content: "";
         position: absolute;
         border-radius: 50%;
-        background: #f2efe9;
+        background: #f4f1ed;
       }
-
       .brand-mark::before {
         width: 17px;
         height: 17px;
         left: 4px;
         top: 8px;
       }
-
       .brand-mark::after {
         width: 17px;
         height: 17px;
@@ -139,13 +134,12 @@
       }
 
       .brand-text {
-        font-size: clamp(1.6rem, 1.5vw, 2.5rem);
+        font-size: clamp(1.55rem, 1.45vw, 2.35rem);
         line-height: 1;
         letter-spacing: -0.08em;
         font-weight: 700;
         color: var(--ink);
       }
-
       .brand-text .wellness {
         font-style: italic;
         font-weight: 300;
@@ -161,14 +155,12 @@
         flex: 1;
         flex-wrap: wrap;
       }
-
       .nav a {
         position: relative;
-        color: rgba(19, 45, 58, 0.9);
-        font-size: 0.86rem;
+        color: rgba(19, 45, 58, 0.92);
+        font-size: 0.87rem;
         font-weight: 500;
       }
-
       .nav a::after {
         content: "";
         position: absolute;
@@ -177,27 +169,25 @@
         width: 0;
         height: 1px;
         background: var(--orange);
-        transition: width 0.2s ease;
+        transition: width .2s ease;
       }
-
-      .nav a:hover::after {
-        width: 100%;
-      }
+      .nav a:hover::after { width: 100%; }
 
       .header-btn {
         display: inline-flex;
         align-items: center;
-        gap: 12px;
-        padding: 0.65rem 1.2rem;
-        border-radius: 9999px;
+        justify-content: center;
+        gap: 10px;
+        padding: 0.7rem 1.2rem;
+        border: 1px solid rgba(19, 45, 58, 0.08);
         background: rgba(255,255,255,0.7);
-        border: 1px solid rgba(19, 45, 58, 0.1);
+        border-radius: 9999px;
         color: var(--ink);
         font-weight: 600;
         box-shadow: 0 10px 24px rgba(17, 34, 41, 0.04);
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
+        transition: transform .2s ease, box-shadow .2s ease;
+        cursor: pointer;
       }
-
       .header-btn:hover {
         transform: translateY(-1px);
         box-shadow: 0 14px 28px rgba(17,34,41,0.06);
@@ -205,54 +195,50 @@
 
       .hero-shell {
         background: rgba(255,255,255,0.04);
-        border-radius: 0 0 30px 30px;
+        border-radius: 0 0 28px 28px;
         overflow: hidden;
       }
 
       .hero-inner {
         display: grid;
-        grid-template-columns: 1.05fr 1.2fr;
+        grid-template-columns: 1.02fr 1.22fr;
         align-items: center;
-        gap: 22px;
-        padding: 28px 16px 0;
+        gap: 18px;
         min-height: 760px;
+        padding: 28px 14px 0;
       }
 
       .hero-copy {
-        padding-left: 6px;
+        padding-left: 4px;
       }
-
       .eyebrow {
         display: inline-block;
         margin-bottom: 18px;
         font-size: 0.72rem;
-        letter-spacing: 0.28rem;
+        letter-spacing: 0.27rem;
         text-transform: uppercase;
         color: var(--orange);
         font-weight: 700;
       }
-
       .hero-title {
         margin: 0;
         font-family: 'Playfair Display', serif;
-        font-size: clamp(4.2rem, 6vw, 8.7rem);
-        line-height: 0.88;
-        letter-spacing: -0.084em;
+        font-size: clamp(4.2rem, 6vw, 8.8rem);
+        line-height: 0.86;
+        letter-spacing: -0.085em;
         font-weight: 800;
         color: var(--ink);
       }
-
       .hero-title .highlight {
         display: block;
-        font-style: italic;
         color: var(--orange);
+        font-style: italic;
         font-weight: 600;
       }
-
       .hero-sub {
         margin-top: 26px;
         max-width: 600px;
-        color: rgba(19, 45, 58, 0.78);
+        color: rgba(19,45,58,0.78);
         font-size: 1.17rem;
         line-height: 1.5;
         font-weight: 300;
@@ -262,44 +248,32 @@
         display: flex;
         flex-wrap: wrap;
         gap: 18px;
-        margin-top: 30px;
+        margin-top: 28px;
       }
-
-      .btn-primary,
-      .btn-secondary,
-      .cta-main,
-      .cta-ghost {
+      .btn-primary, .btn-secondary, .cta-main, .cta-ghost {
         display: inline-flex;
         align-items: center;
         justify-content: center;
         gap: 10px;
         min-height: 56px;
-        min-width: 220px;
-        padding: 1rem 1.6rem;
-        border-radius: 16px;
-        border: 1px solid rgba(19, 45, 58, 0.12);
-        transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+        min-width: 218px;
+        padding: 1rem 1.5rem;
+        border-radius: 14px;
+        border: 1px solid rgba(19,45,58,0.12);
+        transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
         font-weight: 600;
         cursor: pointer;
       }
-
-      .btn-primary,
-      .cta-main {
-        background: rgba(19, 45, 58, 0.96);
+      .btn-primary, .cta-main {
+        background: rgba(19,45,58,0.96);
         color: white;
-        box-shadow: 0 12px 26px rgba(17, 34, 41, 0.12);
+        box-shadow: 0 12px 26px rgba(17,34,41,.12);
       }
-
-      .btn-secondary,
-      .cta-ghost {
-        background: rgba(255,255,255,0.36);
+      .btn-secondary, .cta-ghost {
+        background: rgba(255,255,255,0.38);
         color: var(--ink);
       }
-
-      .btn-primary:hover,
-      .btn-secondary:hover,
-      .cta-main:hover,
-      .cta-ghost:hover {
+      .btn-primary:hover, .btn-secondary:hover, .cta-main:hover, .cta-ghost:hover {
         transform: translateY(-1px);
       }
 
@@ -307,42 +281,34 @@
         position: relative;
         min-height: 700px;
         display: grid;
-        grid-template-columns: 1.2fr 0.9fr;
+        grid-template-columns: 1.2fr 0.94fr;
         grid-template-rows: 1fr 0.9fr;
         gap: 18px;
         padding: 6px 10px 14px 0;
       }
 
-      .shape {
-        position: absolute;
-        z-index: 0;
-        border-radius: 9999px;
-        pointer-events: none;
-      }
-
-      .shape-a { width: 220px; height: 220px; background: rgba(240, 128, 85, 0.88); right: -44px; top: -16px; }
-      .shape-b { width: 200px; height: 200px; background: rgba(79, 142, 181, 0.85); right: 30px; bottom: -18px; }
-      .shape-c { width: 200px; height: 200px; background: rgba(242, 175, 127, 0.7); left: -36px; top: 52px; }
-      .shape-d { width: 220px; height: 220px; background: rgba(110, 160, 186, 0.8); left: 48%; bottom: -30px; transform: translateX(-50%); }
-      .shape-e { width: 180px; height: 180px; background: rgba(240, 132, 87, 0.7); left: -18px; bottom: 26px; }
-      .shape-f { width: 220px; height: 220px; background: rgba(242, 175, 127, 0.18); right: 28px; bottom: 22px; border: 1px solid rgba(18, 45, 58, 0.12); }
+      .shape { position: absolute; z-index: 0; border-radius: 9999px; pointer-events: none; }
+      .shape-a { width: 220px; height: 220px; background: rgba(240, 128, 85, 0.88); right: -42px; top: -18px; }
+      .shape-b { width: 200px; height: 200px; background: rgba(79, 142, 181, 0.84); right: 34px; bottom: -18px; }
+      .shape-c { width: 200px; height: 200px; background: rgba(242,175,127,0.72); left: -34px; top: 52px; }
+      .shape-d { width: 220px; height: 220px; background: rgba(110,160,186,0.8); left: 48%; bottom: -30px; transform: translateX(-50%); }
+      .shape-e { width: 180px; height: 180px; background: rgba(240,132,87,0.66); left: -18px; bottom: 26px; }
+      .shape-f { width: 220px; height: 220px; background: rgba(242,175,127,0.18); right: 28px; bottom: 22px; border: 1px solid rgba(18,45,58,.12); }
 
       .photo-card {
         position: relative;
         overflow: hidden;
         border-radius: 28px;
-        border: 1px solid rgba(255,255,255,0.22);
-        box-shadow: 0 18px 42px rgba(15, 27, 33, 0.14);
+        border: 1px solid rgba(255,255,255,0.25);
+        box-shadow: 0 18px 40px rgba(15, 27, 33, 0.12);
         background: #d9d3ce;
       }
-
       .photo-card img {
         width: 100%;
         height: 100%;
         object-fit: cover;
         display: block;
       }
-
       .photo-card::before {
         content: "";
         position: absolute;
@@ -351,29 +317,10 @@
         z-index: 1;
       }
 
-      .tile-1 {
-        grid-column: 1;
-        grid-row: 1;
-        min-height: 360px;
-      }
-
-      .tile-2 {
-        grid-column: 2;
-        grid-row: 1;
-        min-height: 360px;
-      }
-
-      .tile-3 {
-        grid-column: 1;
-        grid-row: 2;
-        min-height: 270px;
-      }
-
-      .tile-4 {
-        grid-column: 2;
-        grid-row: 2;
-        min-height: 270px;
-      }
+      .tile-1 { grid-column: 1; grid-row: 1; min-height: 360px; }
+      .tile-2 { grid-column: 2; grid-row: 1; min-height: 360px; }
+      .tile-3 { grid-column: 1; grid-row: 2; min-height: 270px; }
+      .tile-4 { grid-column: 2; grid-row: 2; min-height: 270px; }
 
       .overlay-script {
         position: absolute;
@@ -384,19 +331,18 @@
         justify-content: center;
         text-align: center;
         font-family: 'Playfair Display', serif;
-        color: rgba(19, 45, 58, 0.78);
-        font-size: clamp(2.2rem, 2vw, 3.3rem);
+        color: rgba(19,45,58,0.78);
+        font-size: clamp(2.2rem, 2vw, 3.1rem);
         line-height: 1.02;
         letter-spacing: -0.06em;
         font-style: italic;
         font-weight: 600;
         text-shadow: 0 3px 18px rgba(255,255,255,0.32);
       }
-
       .overlay-script .mini {
         display: block;
-        font-size: 0.5em;
-        letter-spacing: 0.16em;
+        font-size: .50em;
+        letter-spacing: .16em;
         text-transform: uppercase;
         color: rgba(19,45,58,0.74);
         font-style: normal;
@@ -408,14 +354,13 @@
         display: grid;
         grid-template-columns: repeat(5, minmax(0, 1fr));
         gap: 14px;
-        padding: 8px 0 10px;
+        padding: 8px 0 12px;
       }
-
       .service-card {
         background: rgba(255,255,255,0.32);
-        border: 1px solid rgba(19, 45, 58, 0.08);
+        border: 1px solid rgba(19,45,58,0.08);
         border-radius: 22px;
-        padding: 18px 14px 16px;
+        padding: 18px 12px 16px;
         box-shadow: 0 8px 18px rgba(17,34,41,0.025);
         min-height: 220px;
         display: flex;
@@ -423,15 +368,13 @@
         align-items: center;
         justify-content: flex-start;
         text-align: center;
-        transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+        transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
       }
-
       .service-card:hover {
         transform: translateY(-2px);
         border-color: rgba(238,125,88,0.28);
         box-shadow: 0 14px 26px rgba(17,34,41,0.05);
       }
-
       .service-photo {
         width: 72px;
         height: 72px;
@@ -441,31 +384,27 @@
         background: #ddd;
         margin-bottom: 14px;
       }
-
       .service-photo img {
         width: 100%;
         height: 100%;
         object-fit: cover;
         display: block;
       }
-
       .service-card h3 {
         margin: 0 0 8px;
         font-weight: 600;
         font-size: 1rem;
-        line-height: 1.2;
+        line-height: 1.22;
         color: var(--ink);
         max-width: 170px;
       }
-
       .service-card p {
         margin: 0;
         color: rgba(19,45,58,0.72);
         font-size: 0.76rem;
-        line-height: 1.4;
+        line-height: 1.45;
         font-weight: 300;
       }
-
       .circle-arrow {
         display: inline-flex;
         align-items: center;
@@ -486,7 +425,6 @@
         margin-top: 16px;
         padding-bottom: 26px;
       }
-
       .detail-card {
         position: relative;
         overflow: hidden;
@@ -495,26 +433,19 @@
         border: 1px solid rgba(19,45,58,0.08);
         box-shadow: 0 18px 34px rgba(17,34,41,0.05);
       }
-
       .detail-card img {
         width: 100%;
         height: 100%;
         object-fit: cover;
         display: block;
       }
-
-      .feature-cover {
-        position: relative;
-      }
-
       .feature-cover::before {
         content: "";
         position: absolute;
         inset: 0;
-        background: linear-gradient(180deg, rgba(0,0,0,0.06), rgba(0,0,0,0.2));
+        background: linear-gradient(180deg, rgba(0,0,0,0.06), rgba(0,0,0,0.18));
         z-index: 1;
       }
-
       .feature-text {
         position: absolute;
         left: 24px;
@@ -523,16 +454,14 @@
         z-index: 2;
         color: #f6f2ee;
       }
-
       .feature-text h2 {
         margin: 0 0 18px;
         font-family: 'Playfair Display', serif;
-        font-size: clamp(2.6rem, 3vw, 4.5rem);
-        line-height: 0.92;
+        font-size: clamp(2.5rem, 3vw, 4.4rem);
+        line-height: 0.9;
         letter-spacing: -0.07em;
         color: #f4f2ee;
       }
-
       .small-btn {
         display: inline-flex;
         align-items: center;
@@ -544,21 +473,20 @@
         border: 1px solid rgba(255,255,255,0.28);
         font-size: 0.9rem;
         font-weight: 600;
+        cursor: pointer;
       }
 
       .plan-panel {
-        background: linear-gradient(180deg, rgba(244, 214, 184, 0.75), rgba(255,255,255,0.7));
+        background: linear-gradient(180deg, rgba(244,214,184,0.78), rgba(255,255,255,0.72));
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 30px 18px;
+        padding: 28px 18px;
       }
-
       .plan-content {
         width: 100%;
         max-width: 440px;
       }
-
       .mini-badge {
         display: inline-block;
         margin-bottom: 12px;
@@ -568,7 +496,6 @@
         letter-spacing: 0.2em;
         font-weight: 700;
       }
-
       .plan-content h2 {
         margin: 0 0 18px;
         font-family: 'Playfair Display', serif;
@@ -576,7 +503,6 @@
         line-height: 0.9;
         letter-spacing: -0.07em;
       }
-
       .plan-content p {
         margin: 0 0 24px;
         color: rgba(19,45,58,0.76);
@@ -584,26 +510,23 @@
         line-height: 1.55;
         font-weight: 300;
       }
-
       .cta-main {
         min-width: 0;
         width: fit-content;
       }
 
       .quote-panel {
-        background: linear-gradient(180deg, rgba(245, 210, 196, 0.85), rgba(248, 234, 225, 0.9));
-        padding: 30px 18px 22px;
+        background: linear-gradient(180deg, rgba(246,218,199,0.88), rgba(248,234,225,0.9));
+        padding: 32px 18px 22px;
       }
-
       .quote-mark {
         margin: 0 0 18px;
         font-family: 'Playfair Display', serif;
         font-size: clamp(3.5rem, 4vw, 5rem);
         line-height: 0.8;
         letter-spacing: -0.08em;
-        color: rgba(238,125,88,0.92);
+        color: rgba(238,125,88,0.94);
       }
-
       .quote-list {
         list-style: none;
         padding: 0;
@@ -612,7 +535,6 @@
         flex-direction: column;
         gap: 10px;
       }
-
       .quote-list li {
         display: flex;
         align-items: center;
@@ -622,7 +544,6 @@
         font-weight: 500;
         line-height: 1.4;
       }
-
       .feature-bullet {
         width: 30px;
         height: 30px;
@@ -635,6 +556,174 @@
         font-size: 0.95rem;
       }
 
+      /* QUIZ STYLES */
+      .quiz-section {
+        background: linear-gradient(135deg, rgba(238,125,88,0.05), rgba(32,77,115,0.05));
+        border: 1px solid rgba(19,45,58,0.08);
+        border-radius: 30px;
+        padding: 40px 32px;
+        margin: 40px 0;
+      }
+
+      .quiz-header {
+        text-align: center;
+        margin-bottom: 36px;
+      }
+
+      .quiz-header h2 {
+        margin: 0 0 12px;
+        font-family: 'Playfair Display', serif;
+        font-size: clamp(2.2rem, 4vw, 4.2rem);
+        line-height: 1;
+        letter-spacing: -0.07em;
+        color: var(--ink);
+      }
+
+      .quiz-header p {
+        margin: 0;
+        color: rgba(19,45,58,0.76);
+        font-size: 1rem;
+        font-weight: 300;
+      }
+
+      .quiz-container {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+
+      .quiz-progress {
+        margin-bottom: 32px;
+      }
+
+      .progress-bar {
+        height: 3px;
+        background: rgba(19,45,58,0.08);
+        border-radius: 9999px;
+        overflow: hidden;
+      }
+
+      .progress-fill {
+        height: 100%;
+        background: linear-gradient(90deg, var(--orange), var(--blue));
+        width: 0%;
+        transition: width 0.4s ease;
+      }
+
+      .quiz-steps {
+        position: relative;
+        min-height: 400px;
+      }
+
+      .quiz-step {
+        opacity: 0;
+        pointer-events: none;
+        position: absolute;
+        width: 100%;
+        transition: opacity 0.3s ease;
+      }
+
+      .quiz-step.active {
+        opacity: 1;
+        pointer-events: auto;
+        position: relative;
+      }
+
+      .quiz-step h3 {
+        margin: 0 0 24px;
+        font-size: 1.4rem;
+        font-weight: 600;
+        color: var(--ink);
+      }
+
+      .quiz-options {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin-bottom: 28px;
+      }
+
+      .quiz-option {
+        padding: 16px 20px;
+        border: 2px solid rgba(19,45,58,0.08);
+        background: rgba(255,255,255,0.5);
+        border-radius: 14px;
+        text-align: left;
+        color: var(--ink);
+        font-weight: 500;
+        cursor: pointer;
+        transition: all 0.2s ease;
+      }
+
+      .quiz-option:hover {
+        border-color: var(--orange);
+        background: rgba(255,255,255,0.8);
+      }
+
+      .quiz-option.selected {
+        border-color: var(--orange);
+        background: rgba(238,125,88,0.1);
+      }
+
+      .quiz-buttons {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        margin-top: 28px;
+      }
+
+      .quiz-btn {
+        flex: 1;
+        padding: 12px 24px;
+        border: 1px solid rgba(19,45,58,0.12);
+        background: rgba(255,255,255,0.6);
+        border-radius: 12px;
+        cursor: pointer;
+        font-weight: 600;
+        transition: all 0.2s ease;
+      }
+
+      .quiz-btn.next {
+        background: var(--orange);
+        color: white;
+        flex: 0.5;
+      }
+
+      .quiz-btn:hover {
+        transform: translateY(-1px);
+      }
+
+      .quiz-success {
+        text-align: center;
+        padding: 40px;
+      }
+
+      .quiz-success-icon {
+        width: 80px;
+        height: 80px;
+        margin: 0 auto 24px;
+        background: rgba(238,125,88,0.1);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2rem;
+      }
+
+      .quiz-success h3 {
+        margin: 0 0 12px;
+        font-family: 'Playfair Display', serif;
+        font-size: 2.2rem;
+        color: var(--ink);
+      }
+
+      .quiz-success p {
+        margin: 0 0 24px;
+        color: rgba(19,45,58,0.72);
+        font-size: 1rem;
+        line-height: 1.6;
+      }
+
+      /* Footer */
       .footer-band {
         margin-top: 10px;
         background: rgba(16,42,57,0.96);
@@ -642,34 +731,24 @@
         padding: 26px 0 22px;
         color: #f3efe9;
       }
-
       .footer-grid {
         display: grid;
         grid-template-columns: 1.7fr repeat(5, minmax(0, 1fr));
         gap: 18px;
         align-items: start;
       }
-
       .footer-brand {
         display: flex;
         align-items: center;
         gap: 12px;
         margin-bottom: 10px;
       }
-
-      .footer-brand .brand-mark {
-        background: #f0ede9;
-      }
-
+      .footer-brand .brand-mark { background: #f0ede9; }
       .footer-brand .brand-text {
         color: #f3efe9;
-        font-size: clamp(1.4rem, 1.2vw, 1.9rem);
+        font-size: clamp(1.4rem, 1.2vw, 1.85rem);
       }
-
-      .footer-brand .brand-text .wellness {
-        color: var(--gold);
-      }
-
+      .footer-brand .brand-text .wellness { color: var(--gold); }
       .footer-copy {
         max-width: 220px;
         color: rgba(255,255,255,0.72);
@@ -679,16 +758,14 @@
         text-transform: uppercase;
         margin-top: 14px;
       }
-
       .footer-col h4 {
         margin: 0 0 10px;
         font-size: 0.7rem;
         letter-spacing: 0.2em;
         text-transform: uppercase;
-        color: rgba(255,255,255,0.9);
+        color: rgba(255,255,255,0.92);
         font-weight: 700;
       }
-
       .footer-col span {
         display: block;
         color: rgba(255,255,255,0.72);
@@ -697,83 +774,33 @@
       }
 
       @media (max-width: 1180px) {
-        .hero-inner {
-          grid-template-columns: 1fr;
-          min-height: auto;
-        }
-
-        .service-grid {
-          grid-template-columns: repeat(3, minmax(0, 1fr));
-        }
-
-        .detail-row {
-          grid-template-columns: 1fr;
-        }
-
-        .footer-grid {
-          grid-template-columns: repeat(3, minmax(0, 1fr));
-        }
+        .hero-inner { grid-template-columns: 1fr; min-height: auto; }
+        .service-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+        .detail-row { grid-template-columns: 1fr; }
+        .footer-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
       }
-
       @media (max-width: 840px) {
         .nav { display: none; }
-
-        .header-inner {
-          justify-content: space-between;
-        }
-
-        .hero-title {
-          font-size: clamp(3.6rem, 18vw, 7rem);
-        }
-
-        .service-grid {
-          grid-template-columns: repeat(2, minmax(0, 1fr));
-        }
-
-        .footer-grid {
-          grid-template-columns: repeat(2, minmax(0, 1fr));
-        }
+        .header-inner { justify-content: space-between; }
+        .hero-title { font-size: clamp(3.5rem, 18vw, 7rem); }
+        .service-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        .footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
       }
-
       @media (max-width: 560px) {
-        .container {
-          padding-left: 10px;
-          padding-right: 10px;
-        }
-
-        .cta-row {
-          flex-direction: column;
-        }
-
-        .btn-primary,
-        .btn-secondary,
-        .header-btn,
-        .cta-main,
-        .cta-ghost {
-          width: 100%;
-        }
-
-        .hero-collage {
-          grid-template-columns: 1fr;
-          grid-template-rows: repeat(4, minmax(180px, 1fr));
-        }
-
-        .tile-1, .tile-2, .tile-3, .tile-4 {
-          grid-column: 1;
-        }
-
+        .container { padding-left: 10px; padding-right: 10px; }
+        .cta-row { flex-direction: column; }
+        .btn-primary, .btn-secondary, .header-btn, .cta-main, .cta-ghost { width: 100%; }
+        .hero-collage { grid-template-columns: 1fr; grid-template-rows: repeat(4, minmax(180px, 1fr)); }
+        .tile-1, .tile-2, .tile-3, .tile-4 { grid-column: 1; }
         .tile-1 { grid-row: 1; }
         .tile-2 { grid-row: 2; }
         .tile-3 { grid-row: 3; }
         .tile-4 { grid-row: 4; }
-
-        .service-grid {
-          grid-template-columns: 1fr;
-        }
-
-        .footer-grid {
-          grid-template-columns: 1fr;
-        }
+        .service-grid { grid-template-columns: 1fr; }
+        .footer-grid { grid-template-columns: 1fr; }
+        .quiz-section { padding: 24px 16px; }
+        .quiz-buttons { flex-direction: column; }
+        .quiz-btn { flex: 1 !important; }
       }
     </style>
   </head>
@@ -794,7 +821,7 @@
             <a href="#">For Clinicians</a>
           </nav>
 
-          <button class="header-btn" type="button">
+          <button class="header-btn" onclick="scrollToQuiz()" type="button">
             <span>Get Started</span>
             <span aria-hidden="true">→</span>
           </button>
@@ -817,8 +844,8 @@
             </p>
 
             <div class="cta-row">
-              <button class="btn-primary" type="button">Explore Our Services <span aria-hidden="true">→</span></button>
-              <button class="btn-secondary" type="button">Take the Care Plan Quiz</button>
+              <button class="btn-primary" onclick="scrollToQuiz()" type="button">Explore Our Services <span aria-hidden="true">→</span></button>
+              <button class="btn-secondary" onclick="scrollToQuiz()" type="button">Take the Care Plan Quiz</button>
             </div>
           </div>
 
@@ -831,11 +858,11 @@
             <div class="shape shape-f"></div>
 
             <div class="photo-card tile-1">
-              <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80" alt="Tropical palm and sky" />
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=1200&q=80" alt="Diverse person outdoors with warm smile" />
             </div>
 
             <div class="photo-card tile-2">
-              <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1200&q=80" alt="Happy person smiling outdoors" />
+              <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1200&q=80" alt="Happy person of color in sunlight" />
             </div>
 
             <div class="photo-card tile-3">
@@ -846,7 +873,7 @@
                   Limits
                 </div>
               </div>
-              <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=900&q=80" alt="Parent and child outdoors" />
+              <img src="https://images.unsplash.com/photo-1516627145497-ae6ab60908c9?auto=format&fit=crop&w=900&q=80" alt="Diverse couple together" />
             </div>
 
             <div class="photo-card tile-4">
@@ -859,7 +886,7 @@
       <section class="service-grid" aria-label="Services">
         <article class="service-card">
           <div class="service-photo">
-            <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=500&q=80" alt="Individual therapy" />
+            <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=500&q=80" alt="Individual therapy - person of color" />
           </div>
           <h3>Individual Therapy</h3>
           <p>Support for what you're carrying.</p>
@@ -868,7 +895,7 @@
 
         <article class="service-card">
           <div class="service-photo">
-            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=500&q=80" alt="Couples therapy" />
+            <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=500&q=80" alt="Couples therapy - diverse couple" />
           </div>
           <h3>Couples Therapy</h3>
           <p>Stronger connection and trust.</p>
@@ -877,7 +904,7 @@
 
         <article class="service-card">
           <div class="service-photo">
-            <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=500&q=80" alt="Family therapy" />
+            <img src="https://images.unsplash.com/photo-1516627145497-ae6ab60908c9?auto=format&fit=crop&w=500&q=80" alt="Family therapy - diverse family" />
           </div>
           <h3>Family Therapy</h3>
           <p>Support for every stage.</p>
@@ -886,7 +913,7 @@
 
         <article class="service-card">
           <div class="service-photo">
-            <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&w=500&q=80" alt="Children and teens" />
+            <img src="https://images.unsplash.com/photo-1503803735170-ce289e8b56e8?auto=format&fit=crop&w=500&q=80" alt="Children and teens - diverse youth" />
           </div>
           <h3>Children &amp; Teens</h3>
           <p>Safe spaces to grow and feel seen.</p>
@@ -895,7 +922,7 @@
 
         <article class="service-card">
           <div class="service-photo">
-            <img src="https://images.unsplash.com/photo-1541534401786-2077eed87a74?auto=format&fit=crop&w=500&q=80" alt="Psychiatric medication" />
+            <img src="https://images.unsplash.com/photo-1537368310519-f46fbc4f24f3?auto=format&fit=crop&w=500&q=80" alt="Psychiatric medication - healthcare provider" />
           </div>
           <h3>Psychiatric Medication Management</h3>
           <p>Thoughtful, personalized care.</p>
@@ -904,7 +931,7 @@
 
         <article class="service-card">
           <div class="service-photo">
-            <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=500&q=80" alt="Spravato care" />
+            <img src="https://images.unsplash.com/photo-1576091160550-112173f7f869?auto=format&fit=crop&w=500&q=80" alt="Spravato care - wellness treatment" />
           </div>
           <h3>Spravato® Treatment</h3>
           <p>A different path forward.</p>
@@ -913,7 +940,7 @@
 
         <article class="service-card">
           <div class="service-photo">
-            <img src="https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?auto=format&fit=crop&w=500&q=80" alt="Sexual wellness" />
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=500&q=80" alt="Sexual wellness - pride and inclusion" />
           </div>
           <h3>Sexual Wellness &amp; Testing</h3>
           <p>Testing, PrEP, PEP, and more.</p>
@@ -922,7 +949,7 @@
 
         <article class="service-card">
           <div class="service-photo">
-            <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=500&q=80" alt="Groups" />
+            <img src="https://images.unsplash.com/photo-1517457373614-b7152f800fd1?auto=format&fit=crop&w=500&q=80" alt="Groups - community support" />
           </div>
           <h3>Groups</h3>
           <p>Community and real change.</p>
@@ -931,7 +958,7 @@
 
         <article class="service-card">
           <div class="service-photo">
-            <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=500&q=80" alt="Senior care" />
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=500&q=80" alt="Senior care - elder wellness" />
           </div>
           <h3>Senior Care</h3>
           <p>Compassionate support for aging well.</p>
@@ -940,7 +967,7 @@
 
         <article class="service-card">
           <div class="service-photo">
-            <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=500&q=80" alt="Care plan" />
+            <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=500&q=80" alt="Care plan - personalized pathway" />
           </div>
           <h3>Care Plan</h3>
           <p>Build your path with expert guidance.</p>
@@ -950,7 +977,7 @@
 
       <section class="detail-row" aria-label="Care and support details">
         <div class="detail-card feature-cover">
-          <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80" alt="Beach with palms" />
+          <img src="https://images.unsplash.com/photo-1552058544-f906b5519c7f?auto=format&fit=crop&w=1200&q=80" alt="Diverse group in wellness setting" />
           <div class="feature-text">
             <h2>Care that meets you where you are.</h2>
             <div class="small-btn">Our Approach <span aria-hidden="true">→</span></div>
@@ -962,14 +989,14 @@
             <div class="mini-badge">Build your plan</div>
             <h2>Build your care plan.</h2>
             <p>
-              Take a short quiz and we’ll help you find the right services for your goals, needs, and lifestyle.
+              Take a short quiz and we'll help you find the right services for your goals, needs, and lifestyle.
             </p>
-            <button class="cta-main" type="button">Take the Care Plan Quiz <span aria-hidden="true">→</span></button>
+            <button class="cta-main" onclick="scrollToQuiz()" type="button">Take the Care Plan Quiz <span aria-hidden="true">→</span></button>
           </div>
         </div>
 
         <div class="detail-card quote-panel">
-          <div class="quote-mark">“</div>
+          <div class="quote-mark">"</div>
           <ul class="quote-list">
             <li><span class="feature-bullet">✓</span> <span>Evidence-Based Care</span></li>
             <li><span class="feature-bullet">✓</span> <span>Inclusive &amp; Affirming</span></li>
@@ -977,6 +1004,128 @@
             <li><span class="feature-bullet">✓</span> <span>In Person or Telehealth</span></li>
             <li><span class="feature-bullet">✓</span> <span>Community Focused</span></li>
           </ul>
+        </div>
+      </section>
+
+      <!-- DIAGNOSTIC INTAKE QUIZ -->
+      <section class="quiz-section" id="quiz-section">
+        <div class="quiz-container">
+          <div class="quiz-header">
+            <span class="eyebrow" style="display: inline-block;">Diagnostic Intake</span>
+            <h2>Let's build a plan that works for you.</h2>
+            <p>Complete this comprehensive clinical assessment to help our team tailor your therapeutic or psychiatric care pathway.</p>
+          </div>
+
+          <div class="quiz-progress">
+            <div class="progress-bar">
+              <div class="progress-fill" id="progressFill"></div>
+            </div>
+          </div>
+
+          <div class="quiz-steps">
+            <!-- Step 1: Primary Focus -->
+            <div class="quiz-step active" id="step-0">
+              <h3>What is your primary focus for care?</h3>
+              <div class="quiz-options">
+                <button class="quiz-option" onclick="selectOption(this, 0)">Counseling &amp; Mental Health</button>
+                <button class="quiz-option" onclick="selectOption(this, 0)">Holistic Primary Care</button>
+                <button class="quiz-option" onclick="selectOption(this, 0)">Specialty Wellness</button>
+                <button class="quiz-option" onclick="selectOption(this, 0)">Sexual Health &amp; Testing</button>
+              </div>
+              <div class="quiz-buttons">
+                <button class="quiz-btn next" onclick="nextStep()">Continue →</button>
+              </div>
+            </div>
+
+            <!-- Step 2: Timeline -->
+            <div class="quiz-step" id="step-1">
+              <h3>What is your current timeline or urgency?</h3>
+              <div class="quiz-options">
+                <button class="quiz-option" onclick="selectOption(this, 1)">Routine / Preventative</button>
+                <button class="quiz-option" onclick="selectOption(this, 1)">Less than a month</button>
+                <button class="quiz-option" onclick="selectOption(this, 1)">1 to 6 months</button>
+                <button class="quiz-option" onclick="selectOption(this, 1)">Over 6 months / Chronic</button>
+              </div>
+              <div class="quiz-buttons">
+                <button class="quiz-btn" onclick="prevStep()">← Back</button>
+                <button class="quiz-btn next" onclick="nextStep()">Continue →</button>
+              </div>
+            </div>
+
+            <!-- Step 3: Goals -->
+            <div class="quiz-step" id="step-2">
+              <h3>What is your primary goal for this visit?</h3>
+              <div class="quiz-options">
+                <button class="quiz-option" onclick="selectOption(this, 2)">Optimization &amp; Prevention</button>
+                <button class="quiz-option" onclick="selectOption(this, 2)">Symptom Management</button>
+                <button class="quiz-option" onclick="selectOption(this, 2)">Deep Healing &amp; Relief</button>
+              </div>
+              <div class="quiz-buttons">
+                <button class="quiz-btn" onclick="prevStep()">← Back</button>
+                <button class="quiz-btn next" onclick="nextStep()">Continue →</button>
+              </div>
+            </div>
+
+            <!-- Step 4: Treatment History -->
+            <div class="quiz-step" id="step-3">
+              <h3>Have you previously sought treatment?</h3>
+              <div class="quiz-options">
+                <button class="quiz-option" onclick="selectOption(this, 3)">No, first time seeking care</button>
+                <button class="quiz-option" onclick="selectOption(this, 3)">Yes, standard medical care</button>
+                <button class="quiz-option" onclick="selectOption(this, 3)">Yes, talk therapy or counseling</button>
+                <button class="quiz-option" onclick="selectOption(this, 3)">Yes, multiple psychiatric meds without success</button>
+              </div>
+              <div class="quiz-buttons">
+                <button class="quiz-btn" onclick="prevStep()">← Back</button>
+                <button class="quiz-btn next" onclick="nextStep()">Continue →</button>
+              </div>
+            </div>
+
+            <!-- Step 5: Programs -->
+            <div class="quiz-step" id="step-4">
+              <h3>Select the specific program you are interested in:</h3>
+              <div class="quiz-options">
+                <button class="quiz-option" onclick="selectOption(this, 4, true)">Therapy &amp; Psychiatric Care</button>
+                <button class="quiz-option" onclick="selectOption(this, 4, true)">Holistic Primary Care</button>
+                <button class="quiz-option" onclick="selectOption(this, 4, true)">Peptides, Vitamins &amp; Supplements</button>
+                <button class="quiz-option" onclick="selectOption(this, 4, true)">STD, STI &amp; HIV Testing (PEP/PrEP)</button>
+              </div>
+              <div class="quiz-buttons">
+                <button class="quiz-btn" onclick="prevStep()">← Back</button>
+                <button class="quiz-btn next" onclick="nextStep()">Continue →</button>
+              </div>
+            </div>
+
+            <!-- Step 6: Contact Info -->
+            <div class="quiz-step" id="step-5">
+              <h3>Let's secure your care plan.</h3>
+              <p style="color: rgba(19,45,58,0.72); margin-bottom: 20px;">Where should our clinical coordinator send your confidential triage results?</p>
+              <div class="quiz-options" style="gap: 16px;">
+                <input type="text" placeholder="Legal First &amp; Last Name" style="padding: 12px 16px; border: 1px solid rgba(19,45,58,0.12); border-radius: 12px; font-size: 1rem;" />
+                <input type="email" placeholder="Email Address" style="padding: 12px 16px; border: 1px solid rgba(19,45,58,0.12); border-radius: 12px; font-size: 1rem;" />
+                <input type="tel" placeholder="Phone Number" style="padding: 12px 16px; border: 1px solid rgba(19,45,58,0.12); border-radius: 12px; font-size: 1rem;" />
+              </div>
+              <div class="quiz-buttons">
+                <button class="quiz-btn" onclick="prevStep()">← Back</button>
+                <button class="quiz-btn next" onclick="completeQuiz()">Submit &amp; Analyze →</button>
+              </div>
+            </div>
+
+            <!-- Success State -->
+            <div class="quiz-step" id="step-6">
+              <div class="quiz-success">
+                <div class="quiz-success-icon">✓</div>
+                <h3>Profile Analyzed.</h3>
+                <p>
+                  Based on your detailed assessment, our clinical team is preparing a customized care pathway. A Be Fehr intake coordinator will contact you shortly to discuss your tailored options and verify benefits.
+                </p>
+                <p style="margin-top: 24px; font-weight: 600;">
+                  Need immediate assistance? <br/>
+                  <a href="tel:954-600-0551" style="color: var(--orange);">954-600-0551</a>
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
     </main>
@@ -1024,5 +1173,56 @@
         </div>
       </div>
     </footer>
+
+    <script>
+      let currentStep = 0;
+      const totalSteps = 6;
+
+      function scrollToQuiz() {
+        document.getElementById('quiz-section').scrollIntoView({ behavior: 'smooth' });
+      }
+
+      function updateProgress() {
+        const progress = ((currentStep + 1) / (totalSteps + 1)) * 100;
+        document.getElementById('progressFill').style.width = progress + '%';
+      }
+
+      function selectOption(button, stepIndex, isMulti = false) {
+        if (!isMulti) {
+          const siblings = button.parentElement.querySelectorAll('.quiz-option');
+          siblings.forEach(sibling => sibling.classList.remove('selected'));
+        }
+        button.classList.add('selected');
+      }
+
+      function nextStep() {
+        if (currentStep < totalSteps) {
+          document.getElementById(`step-${currentStep}`).classList.remove('active');
+          currentStep++;
+          document.getElementById(`step-${currentStep}`).classList.add('active');
+          updateProgress();
+          window.scrollTo({ top: document.querySelector('.quiz-section').offsetTop - 100, behavior: 'smooth' });
+        }
+      }
+
+      function prevStep() {
+        if (currentStep > 0) {
+          document.getElementById(`step-${currentStep}`).classList.remove('active');
+          currentStep--;
+          document.getElementById(`step-${currentStep}`).classList.add('active');
+          updateProgress();
+        }
+      }
+
+      function completeQuiz() {
+        document.getElementById(`step-${currentStep}`).classList.remove('active');
+        currentStep++;
+        document.getElementById(`step-${currentStep}`).classList.add('active');
+        updateProgress();
+        window.scrollTo({ top: document.querySelector('.quiz-section').offsetTop - 100, behavior: 'smooth' });
+      }
+
+      updateProgress();
+    </script>
   </body>
 </html>
