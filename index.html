@@ -1,0 +1,1028 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Be Fehr Wellness</title>
+    <meta
+      name="description"
+      content="Be Fehr Wellness provides compassionate, inclusive, culturally grounded mental health and wellness care in person and online."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: {
+                cream: '#f5efe9',
+                panel: '#f9f3ee',
+                sand: '#f0d0b0',
+                orange: '#ea7b58',
+                orangeSoft: '#f4ba93',
+                blue: '#1f4d73',
+                navy: '#112d3f',
+                gold: '#d8b06d',
+                ink: '#142c38',
+                muted: '#5d6d78',
+                line: '#d6d2cd',
+                footer: '#102a39'
+              }
+            },
+            fontFamily: {
+              serif: ['"Playfair Display"', 'serif'],
+              sans: ['Poppins', 'sans-serif']
+            }
+          }
+        }
+      };
+    </script>
+    <style>
+      :root {
+        --bg: #f5efe9;
+        --panel: #faf5f2;
+        --ink: #132d3a;
+        --ink-soft: #5a6470;
+        --orange: #ee7d58;
+        --orange-soft: #f4b98a;
+        --orange-deep: #d96e47;
+        --blue: #1d4d6f;
+        --blue-soft: #7db0c8;
+        --gold: #d4a968;
+        --line: #d9d2cc;
+        --navy: #102a39;
+        --shadow: rgba(17, 34, 41, 0.08);
+      }
+
+      * { box-sizing: border-box; }
+
+      html { scroll-behavior: smooth; }
+
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font-family: 'Poppins', sans-serif;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+      }
+
+      a { text-decoration: none; }
+      button { font: inherit; }
+
+      .container {
+        max-width: 1460px;
+        margin: 0 auto;
+        padding: 0 18px;
+      }
+
+      .site-header {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        background: rgba(245, 239, 233, 0.92);
+        backdrop-filter: blur(10px);
+        border-bottom: 1px solid rgba(19, 45, 58, 0.04);
+      }
+
+      .header-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        min-height: 82px;
+        gap: 24px;
+      }
+
+      .brand-wrap {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        min-width: 220px;
+      }
+
+      .brand-mark {
+        position: relative;
+        width: 34px;
+        height: 34px;
+        border-radius: 9999px;
+        background: #0f1f2a;
+        overflow: hidden;
+      }
+
+      .brand-mark::before,
+      .brand-mark::after {
+        content: "";
+        position: absolute;
+        border-radius: 50%;
+        background: #f2efe9;
+      }
+
+      .brand-mark::before {
+        width: 17px;
+        height: 17px;
+        left: 4px;
+        top: 8px;
+      }
+
+      .brand-mark::after {
+        width: 17px;
+        height: 17px;
+        right: 4px;
+        bottom: 8px;
+        opacity: 0.88;
+      }
+
+      .brand-text {
+        font-size: clamp(1.6rem, 1.5vw, 2.5rem);
+        line-height: 1;
+        letter-spacing: -0.08em;
+        font-weight: 700;
+        color: var(--ink);
+      }
+
+      .brand-text .wellness {
+        font-style: italic;
+        font-weight: 300;
+        color: var(--orange);
+        margin-left: 4px;
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 26px;
+        flex: 1;
+        flex-wrap: wrap;
+      }
+
+      .nav a {
+        position: relative;
+        color: rgba(19, 45, 58, 0.9);
+        font-size: 0.86rem;
+        font-weight: 500;
+      }
+
+      .nav a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -6px;
+        width: 0;
+        height: 1px;
+        background: var(--orange);
+        transition: width 0.2s ease;
+      }
+
+      .nav a:hover::after {
+        width: 100%;
+      }
+
+      .header-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        padding: 0.65rem 1.2rem;
+        border-radius: 9999px;
+        background: rgba(255,255,255,0.7);
+        border: 1px solid rgba(19, 45, 58, 0.1);
+        color: var(--ink);
+        font-weight: 600;
+        box-shadow: 0 10px 24px rgba(17, 34, 41, 0.04);
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      .header-btn:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 14px 28px rgba(17,34,41,0.06);
+      }
+
+      .hero-shell {
+        background: rgba(255,255,255,0.04);
+        border-radius: 0 0 30px 30px;
+        overflow: hidden;
+      }
+
+      .hero-inner {
+        display: grid;
+        grid-template-columns: 1.05fr 1.2fr;
+        align-items: center;
+        gap: 22px;
+        padding: 28px 16px 0;
+        min-height: 760px;
+      }
+
+      .hero-copy {
+        padding-left: 6px;
+      }
+
+      .eyebrow {
+        display: inline-block;
+        margin-bottom: 18px;
+        font-size: 0.72rem;
+        letter-spacing: 0.28rem;
+        text-transform: uppercase;
+        color: var(--orange);
+        font-weight: 700;
+      }
+
+      .hero-title {
+        margin: 0;
+        font-family: 'Playfair Display', serif;
+        font-size: clamp(4.2rem, 6vw, 8.7rem);
+        line-height: 0.88;
+        letter-spacing: -0.084em;
+        font-weight: 800;
+        color: var(--ink);
+      }
+
+      .hero-title .highlight {
+        display: block;
+        font-style: italic;
+        color: var(--orange);
+        font-weight: 600;
+      }
+
+      .hero-sub {
+        margin-top: 26px;
+        max-width: 600px;
+        color: rgba(19, 45, 58, 0.78);
+        font-size: 1.17rem;
+        line-height: 1.5;
+        font-weight: 300;
+      }
+
+      .cta-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 18px;
+        margin-top: 30px;
+      }
+
+      .btn-primary,
+      .btn-secondary,
+      .cta-main,
+      .cta-ghost {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        min-height: 56px;
+        min-width: 220px;
+        padding: 1rem 1.6rem;
+        border-radius: 16px;
+        border: 1px solid rgba(19, 45, 58, 0.12);
+        transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+        font-weight: 600;
+        cursor: pointer;
+      }
+
+      .btn-primary,
+      .cta-main {
+        background: rgba(19, 45, 58, 0.96);
+        color: white;
+        box-shadow: 0 12px 26px rgba(17, 34, 41, 0.12);
+      }
+
+      .btn-secondary,
+      .cta-ghost {
+        background: rgba(255,255,255,0.36);
+        color: var(--ink);
+      }
+
+      .btn-primary:hover,
+      .btn-secondary:hover,
+      .cta-main:hover,
+      .cta-ghost:hover {
+        transform: translateY(-1px);
+      }
+
+      .hero-collage {
+        position: relative;
+        min-height: 700px;
+        display: grid;
+        grid-template-columns: 1.2fr 0.9fr;
+        grid-template-rows: 1fr 0.9fr;
+        gap: 18px;
+        padding: 6px 10px 14px 0;
+      }
+
+      .shape {
+        position: absolute;
+        z-index: 0;
+        border-radius: 9999px;
+        pointer-events: none;
+      }
+
+      .shape-a { width: 220px; height: 220px; background: rgba(240, 128, 85, 0.88); right: -44px; top: -16px; }
+      .shape-b { width: 200px; height: 200px; background: rgba(79, 142, 181, 0.85); right: 30px; bottom: -18px; }
+      .shape-c { width: 200px; height: 200px; background: rgba(242, 175, 127, 0.7); left: -36px; top: 52px; }
+      .shape-d { width: 220px; height: 220px; background: rgba(110, 160, 186, 0.8); left: 48%; bottom: -30px; transform: translateX(-50%); }
+      .shape-e { width: 180px; height: 180px; background: rgba(240, 132, 87, 0.7); left: -18px; bottom: 26px; }
+      .shape-f { width: 220px; height: 220px; background: rgba(242, 175, 127, 0.18); right: 28px; bottom: 22px; border: 1px solid rgba(18, 45, 58, 0.12); }
+
+      .photo-card {
+        position: relative;
+        overflow: hidden;
+        border-radius: 28px;
+        border: 1px solid rgba(255,255,255,0.22);
+        box-shadow: 0 18px 42px rgba(15, 27, 33, 0.14);
+        background: #d9d3ce;
+      }
+
+      .photo-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      .photo-card::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(180deg, rgba(0,0,0,0.04), rgba(0,0,0,0.18));
+        z-index: 1;
+      }
+
+      .tile-1 {
+        grid-column: 1;
+        grid-row: 1;
+        min-height: 360px;
+      }
+
+      .tile-2 {
+        grid-column: 2;
+        grid-row: 1;
+        min-height: 360px;
+      }
+
+      .tile-3 {
+        grid-column: 1;
+        grid-row: 2;
+        min-height: 270px;
+      }
+
+      .tile-4 {
+        grid-column: 2;
+        grid-row: 2;
+        min-height: 270px;
+      }
+
+      .overlay-script {
+        position: absolute;
+        inset: 0;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-family: 'Playfair Display', serif;
+        color: rgba(19, 45, 58, 0.78);
+        font-size: clamp(2.2rem, 2vw, 3.3rem);
+        line-height: 1.02;
+        letter-spacing: -0.06em;
+        font-style: italic;
+        font-weight: 600;
+        text-shadow: 0 3px 18px rgba(255,255,255,0.32);
+      }
+
+      .overlay-script .mini {
+        display: block;
+        font-size: 0.5em;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: rgba(19,45,58,0.74);
+        font-style: normal;
+        font-weight: 700;
+        margin-bottom: 10px;
+      }
+
+      .service-grid {
+        display: grid;
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 14px;
+        padding: 8px 0 10px;
+      }
+
+      .service-card {
+        background: rgba(255,255,255,0.32);
+        border: 1px solid rgba(19, 45, 58, 0.08);
+        border-radius: 22px;
+        padding: 18px 14px 16px;
+        box-shadow: 0 8px 18px rgba(17,34,41,0.025);
+        min-height: 220px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        text-align: center;
+        transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      .service-card:hover {
+        transform: translateY(-2px);
+        border-color: rgba(238,125,88,0.28);
+        box-shadow: 0 14px 26px rgba(17,34,41,0.05);
+      }
+
+      .service-photo {
+        width: 72px;
+        height: 72px;
+        border-radius: 9999px;
+        overflow: hidden;
+        border: 1px solid rgba(19,45,58,0.08);
+        background: #ddd;
+        margin-bottom: 14px;
+      }
+
+      .service-photo img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      .service-card h3 {
+        margin: 0 0 8px;
+        font-weight: 600;
+        font-size: 1rem;
+        line-height: 1.2;
+        color: var(--ink);
+        max-width: 170px;
+      }
+
+      .service-card p {
+        margin: 0;
+        color: rgba(19,45,58,0.72);
+        font-size: 0.76rem;
+        line-height: 1.4;
+        font-weight: 300;
+      }
+
+      .circle-arrow {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 36px;
+        height: 36px;
+        margin-top: auto;
+        border-radius: 9999px;
+        border: 1px solid rgba(19,45,58,0.12);
+        color: var(--ink);
+        font-size: 1.1rem;
+      }
+
+      .detail-row {
+        display: grid;
+        grid-template-columns: 1.08fr 1.12fr 0.84fr;
+        gap: 16px;
+        margin-top: 16px;
+        padding-bottom: 26px;
+      }
+
+      .detail-card {
+        position: relative;
+        overflow: hidden;
+        min-height: 420px;
+        border-radius: 30px;
+        border: 1px solid rgba(19,45,58,0.08);
+        box-shadow: 0 18px 34px rgba(17,34,41,0.05);
+      }
+
+      .detail-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+
+      .feature-cover {
+        position: relative;
+      }
+
+      .feature-cover::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(180deg, rgba(0,0,0,0.06), rgba(0,0,0,0.2));
+        z-index: 1;
+      }
+
+      .feature-text {
+        position: absolute;
+        left: 24px;
+        right: 24px;
+        bottom: 22px;
+        z-index: 2;
+        color: #f6f2ee;
+      }
+
+      .feature-text h2 {
+        margin: 0 0 18px;
+        font-family: 'Playfair Display', serif;
+        font-size: clamp(2.6rem, 3vw, 4.5rem);
+        line-height: 0.92;
+        letter-spacing: -0.07em;
+        color: #f4f2ee;
+      }
+
+      .small-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 0.8rem 1.2rem;
+        border-radius: 9999px;
+        background: rgba(255,255,255,0.12);
+        color: #f4f2ee;
+        border: 1px solid rgba(255,255,255,0.28);
+        font-size: 0.9rem;
+        font-weight: 600;
+      }
+
+      .plan-panel {
+        background: linear-gradient(180deg, rgba(244, 214, 184, 0.75), rgba(255,255,255,0.7));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 30px 18px;
+      }
+
+      .plan-content {
+        width: 100%;
+        max-width: 440px;
+      }
+
+      .mini-badge {
+        display: inline-block;
+        margin-bottom: 12px;
+        color: var(--orange);
+        font-size: 0.76rem;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        font-weight: 700;
+      }
+
+      .plan-content h2 {
+        margin: 0 0 18px;
+        font-family: 'Playfair Display', serif;
+        font-size: clamp(2.5rem, 4vw, 5rem);
+        line-height: 0.9;
+        letter-spacing: -0.07em;
+      }
+
+      .plan-content p {
+        margin: 0 0 24px;
+        color: rgba(19,45,58,0.76);
+        font-size: 1rem;
+        line-height: 1.55;
+        font-weight: 300;
+      }
+
+      .cta-main {
+        min-width: 0;
+        width: fit-content;
+      }
+
+      .quote-panel {
+        background: linear-gradient(180deg, rgba(245, 210, 196, 0.85), rgba(248, 234, 225, 0.9));
+        padding: 30px 18px 22px;
+      }
+
+      .quote-mark {
+        margin: 0 0 18px;
+        font-family: 'Playfair Display', serif;
+        font-size: clamp(3.5rem, 4vw, 5rem);
+        line-height: 0.8;
+        letter-spacing: -0.08em;
+        color: rgba(238,125,88,0.92);
+      }
+
+      .quote-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .quote-list li {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        color: var(--ink);
+        font-size: 0.88rem;
+        font-weight: 500;
+        line-height: 1.4;
+      }
+
+      .feature-bullet {
+        width: 30px;
+        height: 30px;
+        border-radius: 9999px;
+        border: 1px solid rgba(19,45,58,0.12);
+        background: rgba(255,255,255,0.32);
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.95rem;
+      }
+
+      .footer-band {
+        margin-top: 10px;
+        background: rgba(16,42,57,0.96);
+        border-radius: 24px 24px 0 0;
+        padding: 26px 0 22px;
+        color: #f3efe9;
+      }
+
+      .footer-grid {
+        display: grid;
+        grid-template-columns: 1.7fr repeat(5, minmax(0, 1fr));
+        gap: 18px;
+        align-items: start;
+      }
+
+      .footer-brand {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin-bottom: 10px;
+      }
+
+      .footer-brand .brand-mark {
+        background: #f0ede9;
+      }
+
+      .footer-brand .brand-text {
+        color: #f3efe9;
+        font-size: clamp(1.4rem, 1.2vw, 1.9rem);
+      }
+
+      .footer-brand .brand-text .wellness {
+        color: var(--gold);
+      }
+
+      .footer-copy {
+        max-width: 220px;
+        color: rgba(255,255,255,0.72);
+        font-size: 0.7rem;
+        letter-spacing: 0.14em;
+        line-height: 1.7;
+        text-transform: uppercase;
+        margin-top: 14px;
+      }
+
+      .footer-col h4 {
+        margin: 0 0 10px;
+        font-size: 0.7rem;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: rgba(255,255,255,0.9);
+        font-weight: 700;
+      }
+
+      .footer-col span {
+        display: block;
+        color: rgba(255,255,255,0.72);
+        font-size: 0.8rem;
+        line-height: 1.8;
+      }
+
+      @media (max-width: 1180px) {
+        .hero-inner {
+          grid-template-columns: 1fr;
+          min-height: auto;
+        }
+
+        .service-grid {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+
+        .detail-row {
+          grid-template-columns: 1fr;
+        }
+
+        .footer-grid {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+        }
+      }
+
+      @media (max-width: 840px) {
+        .nav { display: none; }
+
+        .header-inner {
+          justify-content: space-between;
+        }
+
+        .hero-title {
+          font-size: clamp(3.6rem, 18vw, 7rem);
+        }
+
+        .service-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+
+        .footer-grid {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+      }
+
+      @media (max-width: 560px) {
+        .container {
+          padding-left: 10px;
+          padding-right: 10px;
+        }
+
+        .cta-row {
+          flex-direction: column;
+        }
+
+        .btn-primary,
+        .btn-secondary,
+        .header-btn,
+        .cta-main,
+        .cta-ghost {
+          width: 100%;
+        }
+
+        .hero-collage {
+          grid-template-columns: 1fr;
+          grid-template-rows: repeat(4, minmax(180px, 1fr));
+        }
+
+        .tile-1, .tile-2, .tile-3, .tile-4 {
+          grid-column: 1;
+        }
+
+        .tile-1 { grid-row: 1; }
+        .tile-2 { grid-row: 2; }
+        .tile-3 { grid-row: 3; }
+        .tile-4 { grid-row: 4; }
+
+        .service-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .footer-grid {
+          grid-template-columns: 1fr;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <div class="header-inner">
+          <div class="brand-wrap" aria-label="Be Fehr Wellness brand">
+            <div class="brand-mark" aria-hidden="true"></div>
+            <div class="brand-text">be fehr <span class="wellness">wellness</span></div>
+          </div>
+
+          <nav class="nav" aria-label="Main navigation">
+            <a href="#">Care &amp; Services</a>
+            <a href="#">About</a>
+            <a href="#">Groups</a>
+            <a href="#">Resources</a>
+            <a href="#">For Clinicians</a>
+          </nav>
+
+          <button class="header-btn" type="button">
+            <span>Get Started</span>
+            <span aria-hidden="true">→</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="hero-shell">
+        <div class="hero-inner">
+          <div class="hero-copy">
+            <div class="eyebrow">Mental Health For Real Life</div>
+            <h1 class="hero-title">
+              You care
+              <span class="highlight">for real life.</span>
+            </h1>
+            <p class="hero-sub">
+              Therapy, psychiatric care, specialized treatments, groups, and wellness support — in a welcoming,
+              inclusive space, in person or online.
+            </p>
+
+            <div class="cta-row">
+              <button class="btn-primary" type="button">Explore Our Services <span aria-hidden="true">→</span></button>
+              <button class="btn-secondary" type="button">Take the Care Plan Quiz</button>
+            </div>
+          </div>
+
+          <div class="hero-collage" aria-label="Wellness collage">
+            <div class="shape shape-a"></div>
+            <div class="shape shape-b"></div>
+            <div class="shape shape-c"></div>
+            <div class="shape shape-d"></div>
+            <div class="shape shape-e"></div>
+            <div class="shape shape-f"></div>
+
+            <div class="photo-card tile-1">
+              <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80" alt="Tropical palm and sky" />
+            </div>
+
+            <div class="photo-card tile-2">
+              <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1200&q=80" alt="Happy person smiling outdoors" />
+            </div>
+
+            <div class="photo-card tile-3">
+              <div class="overlay-script">
+                <div>
+                  <span class="mini">Care</span>
+                  Without<br />
+                  Limits
+                </div>
+              </div>
+              <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=900&q=80" alt="Parent and child outdoors" />
+            </div>
+
+            <div class="photo-card tile-4">
+              <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80" alt="Beach and ocean" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="service-grid" aria-label="Services">
+        <article class="service-card">
+          <div class="service-photo">
+            <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=500&q=80" alt="Individual therapy" />
+          </div>
+          <h3>Individual Therapy</h3>
+          <p>Support for what you're carrying.</p>
+          <div class="circle-arrow">→</div>
+        </article>
+
+        <article class="service-card">
+          <div class="service-photo">
+            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=500&q=80" alt="Couples therapy" />
+          </div>
+          <h3>Couples Therapy</h3>
+          <p>Stronger connection and trust.</p>
+          <div class="circle-arrow">→</div>
+        </article>
+
+        <article class="service-card">
+          <div class="service-photo">
+            <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?auto=format&fit=crop&w=500&q=80" alt="Family therapy" />
+          </div>
+          <h3>Family Therapy</h3>
+          <p>Support for every stage.</p>
+          <div class="circle-arrow">→</div>
+        </article>
+
+        <article class="service-card">
+          <div class="service-photo">
+            <img src="https://images.unsplash.com/photo-1517849845537-4d257902454a?auto=format&fit=crop&w=500&q=80" alt="Children and teens" />
+          </div>
+          <h3>Children &amp; Teens</h3>
+          <p>Safe spaces to grow and feel seen.</p>
+          <div class="circle-arrow">→</div>
+        </article>
+
+        <article class="service-card">
+          <div class="service-photo">
+            <img src="https://images.unsplash.com/photo-1541534401786-2077eed87a74?auto=format&fit=crop&w=500&q=80" alt="Psychiatric medication" />
+          </div>
+          <h3>Psychiatric Medication Management</h3>
+          <p>Thoughtful, personalized care.</p>
+          <div class="circle-arrow">→</div>
+        </article>
+
+        <article class="service-card">
+          <div class="service-photo">
+            <img src="https://images.unsplash.com/photo-1487412720507-e7ab37603c6f?auto=format&fit=crop&w=500&q=80" alt="Spravato care" />
+          </div>
+          <h3>Spravato® Treatment</h3>
+          <p>A different path forward.</p>
+          <div class="circle-arrow">→</div>
+        </article>
+
+        <article class="service-card">
+          <div class="service-photo">
+            <img src="https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?auto=format&fit=crop&w=500&q=80" alt="Sexual wellness" />
+          </div>
+          <h3>Sexual Wellness &amp; Testing</h3>
+          <p>Testing, PrEP, PEP, and more.</p>
+          <div class="circle-arrow">→</div>
+        </article>
+
+        <article class="service-card">
+          <div class="service-photo">
+            <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=500&q=80" alt="Groups" />
+          </div>
+          <h3>Groups</h3>
+          <p>Community and real change.</p>
+          <div class="circle-arrow">→</div>
+        </article>
+
+        <article class="service-card">
+          <div class="service-photo">
+            <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=500&q=80" alt="Senior care" />
+          </div>
+          <h3>Senior Care</h3>
+          <p>Compassionate support for aging well.</p>
+          <div class="circle-arrow">→</div>
+        </article>
+
+        <article class="service-card">
+          <div class="service-photo">
+            <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=500&q=80" alt="Care plan" />
+          </div>
+          <h3>Care Plan</h3>
+          <p>Build your path with expert guidance.</p>
+          <div class="circle-arrow">→</div>
+        </article>
+      </section>
+
+      <section class="detail-row" aria-label="Care and support details">
+        <div class="detail-card feature-cover">
+          <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80" alt="Beach with palms" />
+          <div class="feature-text">
+            <h2>Care that meets you where you are.</h2>
+            <div class="small-btn">Our Approach <span aria-hidden="true">→</span></div>
+          </div>
+        </div>
+
+        <div class="detail-card plan-panel">
+          <div class="plan-content">
+            <div class="mini-badge">Build your plan</div>
+            <h2>Build your care plan.</h2>
+            <p>
+              Take a short quiz and we’ll help you find the right services for your goals, needs, and lifestyle.
+            </p>
+            <button class="cta-main" type="button">Take the Care Plan Quiz <span aria-hidden="true">→</span></button>
+          </div>
+        </div>
+
+        <div class="detail-card quote-panel">
+          <div class="quote-mark">“</div>
+          <ul class="quote-list">
+            <li><span class="feature-bullet">✓</span> <span>Evidence-Based Care</span></li>
+            <li><span class="feature-bullet">✓</span> <span>Inclusive &amp; Affirming</span></li>
+            <li><span class="feature-bullet">✓</span> <span>Whole-Person Approach</span></li>
+            <li><span class="feature-bullet">✓</span> <span>In Person or Telehealth</span></li>
+            <li><span class="feature-bullet">✓</span> <span>Community Focused</span></li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer-band">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <div class="footer-brand">
+              <div class="brand-mark" aria-hidden="true"></div>
+              <div class="brand-text">be fehr <span class="wellness">wellness</span></div>
+            </div>
+            <div class="footer-copy">Mental Health For Real Life</div>
+          </div>
+
+          <div class="footer-col">
+            <h4>Mental Health</h4>
+            <span>Therapy, psychiatric care,</span>
+            <span>and specialized treatment.</span>
+          </div>
+
+          <div class="footer-col">
+            <h4>Sexual Wellness</h4>
+            <span>Testing, PrEP, PEP,</span>
+            <span>and care with support.</span>
+          </div>
+
+          <div class="footer-col">
+            <h4>Community</h4>
+            <span>Groups, connection,</span>
+            <span>and shared resilience.</span>
+          </div>
+
+          <div class="footer-col">
+            <h4>Addiction Support</h4>
+            <span>Individual and group support</span>
+            <span>for lasting change.</span>
+          </div>
+
+          <div class="footer-col">
+            <h4>Senior Care</h4>
+            <span>Compassionate support</span>
+            <span>for aging well.</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
