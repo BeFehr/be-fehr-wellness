@@ -4,143 +4,103 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Be Fehr Wellness</title>
-    <meta
-      name="description"
-      content="Be Fehr Wellness provides compassionate, inclusive, culturally grounded mental health and wellness care in person and online."
-    />
+    <meta name="description" content="Be Fehr Wellness" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              brand: {
-                cream: '#f5efe9',
-                panel: '#f9f3ee',
-                sand: '#f0d0b0',
-                orange: '#ea7b58',
-                orangeSoft: '#f4ba93',
-                blue: '#1f4d73',
-                navy: '#112d3f',
-                gold: '#d8b06d',
-                ink: '#142c38',
-                muted: '#5d6d78',
-                line: '#d8d0c9',
-                footer: '#102a39'
-              }
-            },
-            fontFamily: {
-              serif: ['"Playfair Display"', 'serif'],
-              sans: ['Poppins', 'sans-serif']
-            }
-          }
-        }
-      };
-    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
     <style>
       :root {
-        --bg: #f5efe9;
-        --panel: #f8f3ef;
-        --ink: #152c37;
-        --ink-soft: #586874;
-        --orange: #ee7d58;
-        --orange-soft: #f4ba96;
-        --orange-deep: #d96d47;
-        --blue: #204d73;
-        --blue-soft: #7fb0c9;
-        --gold: #d4aa67;
-        --line: #d9d2cd;
-        --navy: #102a39;
-        --shadow: rgba(17, 34, 41, 0.08);
+        --bg: #f4efe9;
+        --panel: #f8f4f1;
+        --card: rgba(255,255,255,0.35);
+        --ink: #132a38;
+        --ink-soft: rgba(19,42,56,0.72);
+        --orange: #ee7c58;
+        --orange-2: #f5b588;
+        --blue: #1e4f72;
+        --blue-2: #6ba4c0;
+        --navy: #112d3c;
+        --navy-2: #0d2434;
+        --line: rgba(19,42,56,0.08);
+        --shadow: rgba(17,28,34,0.08);
+        --gold: #d5aa68;
       }
 
       * { box-sizing: border-box; }
       html { scroll-behavior: smooth; }
       body {
         margin: 0;
+        font-family: 'Poppins', sans-serif;
         background: var(--bg);
         color: var(--ink);
-        font-family: 'Poppins', sans-serif;
-        -webkit-font-smoothing: antialiased;
-        text-rendering: optimizeLegibility;
       }
+      img { max-width: 100%; display: block; }
       a { text-decoration: none; }
       button { font: inherit; }
 
-      .container {
-        max-width: 1500px;
+      .page-shell {
+        max-width: 1480px;
         margin: 0 auto;
-        padding: 0 16px;
+        padding: 0 14px 0;
       }
 
       .site-header {
         position: sticky;
         top: 0;
-        z-index: 100;
-        background: rgba(245, 239, 233, 0.94);
-        backdrop-filter: blur(10px);
-        border-bottom: 1px solid rgba(19, 45, 58, 0.04);
+        z-index: 30;
+        background: rgba(244,239,233,0.92);
+        backdrop-filter: blur(8px);
+        border-bottom: 1px solid rgba(17,45,60,0.05);
       }
-
       .header-inner {
         display: flex;
         align-items: center;
         justify-content: space-between;
         min-height: 88px;
-        gap: 20px;
+        gap: 18px;
       }
 
-      .brand-wrap {
+      .brand {
         display: flex;
         align-items: center;
         gap: 12px;
         min-width: 220px;
       }
-
       .brand-mark {
         position: relative;
-        width: 34px;
-        height: 34px;
-        border-radius: 9999px;
-        background: #0f1f2a;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background: #0f1f2b;
         overflow: hidden;
-        box-shadow: inset 0 0 0 1px rgba(255,255,255,0.12);
       }
       .brand-mark::before,
       .brand-mark::after {
         content: "";
         position: absolute;
         border-radius: 50%;
-        background: #f4f1ed;
+        background: #f7f2ec;
       }
       .brand-mark::before {
-        width: 17px;
-        height: 17px;
+        width: 16px;
+        height: 16px;
         left: 4px;
-        top: 8px;
+        top: 7px;
       }
       .brand-mark::after {
-        width: 17px;
-        height: 17px;
+        width: 16px;
+        height: 16px;
         right: 4px;
-        bottom: 8px;
-        opacity: 0.88;
+        bottom: 7px;
+        opacity: 0.9;
       }
-
-      .brand-text {
-        font-size: clamp(1.55rem, 1.45vw, 2.35rem);
-        line-height: 1;
+      .brand-name {
+        font-size: clamp(1.9rem, 1.6vw, 3rem);
+        line-height: 0.9;
         letter-spacing: -0.08em;
         font-weight: 700;
-        color: var(--ink);
       }
-      .brand-text .wellness {
+      .brand-name .wellness {
         font-style: italic;
         font-weight: 300;
         color: var(--orange);
@@ -151,15 +111,15 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 26px;
+        gap: 28px;
         flex: 1;
         flex-wrap: wrap;
       }
       .nav a {
-        position: relative;
-        color: rgba(19, 45, 58, 0.92);
-        font-size: 0.87rem;
+        color: rgba(19,42,56,0.9);
+        font-size: 0.82rem;
         font-weight: 500;
+        position: relative;
       }
       .nav a::after {
         content: "";
@@ -173,135 +133,136 @@
       }
       .nav a:hover::after { width: 100%; }
 
-      .header-btn {
+      .header-cta {
         display: inline-flex;
         align-items: center;
         justify-content: center;
         gap: 10px;
-        padding: 0.7rem 1.2rem;
-        border: 1px solid rgba(19, 45, 58, 0.08);
-        background: rgba(255,255,255,0.7);
-        border-radius: 9999px;
+        border: 1px solid rgba(19,42,56,0.08);
+        background: rgba(255,255,255,0.5);
         color: var(--ink);
         font-weight: 600;
-        box-shadow: 0 10px 24px rgba(17, 34, 41, 0.04);
-        transition: transform .2s ease, box-shadow .2s ease;
+        min-width: 132px;
+        padding: 0.7rem 1.2rem;
+        border-radius: 9999px;
+        box-shadow: 0 10px 24px rgba(8,20,29,0.04);
         cursor: pointer;
       }
-      .header-btn:hover {
-        transform: translateY(-1px);
-        box-shadow: 0 14px 28px rgba(17,34,41,0.06);
-      }
 
-      .hero-shell {
-        background: rgba(255,255,255,0.04);
-        border-radius: 0 0 28px 28px;
-        overflow: hidden;
+      .hero {
+        background: rgba(255,255,255,0.03);
+        border-radius: 0 0 24px 24px;
       }
-
-      .hero-inner {
+      .hero-grid {
         display: grid;
-        grid-template-columns: 1.02fr 1.22fr;
-        align-items: center;
+        grid-template-columns: 1.08fr 1.2fr;
         gap: 18px;
+        align-items: center;
         min-height: 760px;
-        padding: 28px 14px 0;
+        padding: 34px 10px 0;
       }
-
       .hero-copy {
-        padding-left: 4px;
+        padding-left: 8px;
       }
       .eyebrow {
         display: inline-block;
         margin-bottom: 18px;
-        font-size: 0.72rem;
-        letter-spacing: 0.27rem;
-        text-transform: uppercase;
         color: var(--orange);
+        text-transform: uppercase;
+        letter-spacing: 0.3rem;
+        font-size: 0.72rem;
         font-weight: 700;
       }
-      .hero-title {
+      .hero-headline {
         margin: 0;
         font-family: 'Playfair Display', serif;
-        font-size: clamp(4.2rem, 6vw, 8.8rem);
-        line-height: 0.86;
+        font-size: clamp(4.2rem, 6vw, 9rem);
+        line-height: 0.88;
         letter-spacing: -0.085em;
         font-weight: 800;
         color: var(--ink);
       }
-      .hero-title .highlight {
+      .hero-headline .sub {
         display: block;
-        color: var(--orange);
-        font-style: italic;
-        font-weight: 600;
+        color: #111f2d;
       }
-      .hero-sub {
-        margin-top: 26px;
+      .hero-headline .sub:last-child {
+        color: var(--ink);
+      }
+      .hero-body {
         max-width: 600px;
-        color: rgba(19,45,58,0.78);
-        font-size: 1.17rem;
+        margin-top: 24px;
+        font-size: 1.18rem;
         line-height: 1.5;
+        color: var(--ink-soft);
         font-weight: 300;
       }
-
-      .cta-row {
+      .hero-actions {
         display: flex;
         flex-wrap: wrap;
-        gap: 18px;
+        gap: 14px;
         margin-top: 28px;
       }
-      .btn-primary, .btn-secondary, .cta-main, .cta-ghost {
+      .primary-btn, .secondary-btn {
         display: inline-flex;
         align-items: center;
         justify-content: center;
         gap: 10px;
-        min-height: 56px;
-        min-width: 218px;
-        padding: 1rem 1.5rem;
+        min-height: 54px;
+        padding: 0.95rem 1.6rem;
         border-radius: 14px;
-        border: 1px solid rgba(19,45,58,0.12);
-        transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+        border: 1px solid rgba(19,42,56,0.12);
         font-weight: 600;
         cursor: pointer;
+        transition: transform .2s ease;
       }
-      .btn-primary, .cta-main {
-        background: rgba(19,45,58,0.96);
-        color: white;
-        box-shadow: 0 12px 26px rgba(17,34,41,.12);
+      .primary-btn {
+        background: rgba(19,42,56,0.96);
+        color: #fff;
       }
-      .btn-secondary, .cta-ghost {
-        background: rgba(255,255,255,0.38);
+      .secondary-btn {
+        background: rgba(255,255,255,0.28);
         color: var(--ink);
       }
-      .btn-primary:hover, .btn-secondary:hover, .cta-main:hover, .cta-ghost:hover {
+      .primary-btn:hover, .secondary-btn:hover, .small-pill:hover {
         transform: translateY(-1px);
       }
 
-      .hero-collage {
+      .collage-wrap {
         position: relative;
         min-height: 700px;
         display: grid;
-        grid-template-columns: 1.2fr 0.94fr;
+        grid-template-columns: 1.05fr 0.92fr;
         grid-template-rows: 1fr 0.9fr;
-        gap: 18px;
-        padding: 6px 10px 14px 0;
+        gap: 16px;
+        padding: 8px 6px 16px 0;
       }
-
-      .shape { position: absolute; z-index: 0; border-radius: 9999px; pointer-events: none; }
-      .shape-a { width: 220px; height: 220px; background: rgba(240, 128, 85, 0.88); right: -42px; top: -18px; }
-      .shape-b { width: 200px; height: 200px; background: rgba(79, 142, 181, 0.84); right: 34px; bottom: -18px; }
-      .shape-c { width: 200px; height: 200px; background: rgba(242,175,127,0.72); left: -34px; top: 52px; }
-      .shape-d { width: 220px; height: 220px; background: rgba(110,160,186,0.8); left: 48%; bottom: -30px; transform: translateX(-50%); }
-      .shape-e { width: 180px; height: 180px; background: rgba(240,132,87,0.66); left: -18px; bottom: 26px; }
-      .shape-f { width: 220px; height: 220px; background: rgba(242,175,127,0.18); right: 28px; bottom: 22px; border: 1px solid rgba(18,45,58,.12); }
+      .shape {
+        position: absolute;
+        z-index: 0;
+        border-radius: 50%;
+        pointer-events: none;
+      }
+      .shape-1 { width: 220px; height: 220px; background: rgba(240,127,86,0.82); right:-38px; top:-18px; }
+      .shape-2 { width: 190px; height: 190px; background: rgba(70,140,175,0.8); right:40px; bottom:14px; }
+      .shape-3 { width: 200px; height: 200px; background: rgba(242,181,138,0.7); left:-34px; top:52px; }
+      .shape-4 { width: 250px; height: 250px; background: rgba(118,161,188,0.8); left:44%; bottom:-34px; transform: translateX(-50%); }
+      .shape-5 { width: 180px; height: 180px; background: rgba(240,132,87,0.7); left:-10px; bottom:22px; }
+      .shape-6 { width: 200px; height: 200px; background: rgba(241,182,138,0.16); right:26px; bottom:24px; border: 1px solid rgba(17,45,60,0.12); }
 
       .photo-card {
         position: relative;
         overflow: hidden;
         border-radius: 28px;
-        border: 1px solid rgba(255,255,255,0.25);
-        box-shadow: 0 18px 40px rgba(15, 27, 33, 0.12);
-        background: #d9d3ce;
+        border: 1px solid rgba(255,255,255,0.18);
+        box-shadow: 0 18px 34px rgba(18,32,39,0.12);
+        z-index: 1;
+      }
+      .photo-card::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(180deg, rgba(0,0,0,0.04), rgba(0,0,0,0.18));
       }
       .photo-card img {
         width: 100%;
@@ -309,20 +270,12 @@
         object-fit: cover;
         display: block;
       }
-      .photo-card::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(180deg, rgba(0,0,0,0.04), rgba(0,0,0,0.18));
-        z-index: 1;
-      }
+      .card-a { grid-column: 1; grid-row: 1; min-height: 360px; }
+      .card-b { grid-column: 2; grid-row: 1; min-height: 360px; }
+      .card-c { grid-column: 1; grid-row: 2; min-height: 260px; }
+      .card-d { grid-column: 2; grid-row: 2; min-height: 260px; }
 
-      .tile-1 { grid-column: 1; grid-row: 1; min-height: 360px; }
-      .tile-2 { grid-column: 2; grid-row: 1; min-height: 360px; }
-      .tile-3 { grid-column: 1; grid-row: 2; min-height: 270px; }
-      .tile-4 { grid-column: 2; grid-row: 2; min-height: 270px; }
-
-      .overlay-script {
+      .script-overlay {
         position: absolute;
         inset: 0;
         z-index: 2;
@@ -331,409 +284,283 @@
         justify-content: center;
         text-align: center;
         font-family: 'Playfair Display', serif;
-        color: rgba(19,45,58,0.78);
-        font-size: clamp(2.2rem, 2vw, 3.1rem);
+        font-style: italic;
+        font-size: clamp(2.2rem, 2vw, 3.2rem);
         line-height: 1.02;
         letter-spacing: -0.06em;
-        font-style: italic;
         font-weight: 600;
-        text-shadow: 0 3px 18px rgba(255,255,255,0.32);
+        color: rgba(19,42,56,0.8);
+        text-shadow: 0 2px 14px rgba(255,255,255,0.2);
       }
-      .overlay-script .mini {
+      .script-overlay .small {
         display: block;
-        font-size: .50em;
-        letter-spacing: .16em;
+        font-size: 0.5em;
+        letter-spacing: 0.14em;
         text-transform: uppercase;
-        color: rgba(19,45,58,0.74);
         font-style: normal;
         font-weight: 700;
-        margin-bottom: 10px;
+        color: rgba(19,42,56,0.75);
+        margin-bottom: 8px;
       }
 
-      .service-grid {
+      .mini-rail {
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 210px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-top: 8px;
+        z-index: 2;
+      }
+      .mini-panel {
+        width: 100%;
+        height: 28%;
+        border-radius: 26px;
+        overflow: hidden;
+        border: 1px solid rgba(255,255,255,0.18);
+      }
+      .mini-panel img { width: 100%; height: 100%; object-fit: cover; }
+      .mini-panel.text-box {
+        background: rgba(255,255,255,0.08);
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        text-align: center;
+        padding: 24px 16px;
+        font-size: 0.9rem;
+        line-height: 1.6;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--ink);
+        font-weight: 700;
+      }
+      .mini-panel.text-box span {
+        display: block;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+      }
+      .mini-panel.text-box .rule {
+        width: 80px;
+        height: 1px;
+        background: rgba(19,42,56,0.8);
+        margin: 10px auto 12px;
+      }
+
+      .service-row {
         display: grid;
-        grid-template-columns: repeat(5, minmax(0, 1fr));
-        gap: 14px;
-        padding: 8px 0 12px;
+        grid-template-columns: repeat(10, minmax(130px, 1fr));
+        gap: 10px;
+        padding-top: 0;
+        margin-top: 0;
       }
       .service-card {
-        background: rgba(255,255,255,0.32);
-        border: 1px solid rgba(19,45,58,0.08);
-        border-radius: 22px;
-        padding: 18px 12px 16px;
-        box-shadow: 0 8px 18px rgba(17,34,41,0.025);
-        min-height: 220px;
+        background: rgba(255,255,255,0.28);
+        border: 1px solid rgba(19,42,56,0.08);
+        border-radius: 18px;
+        min-height: 188px;
+        padding: 14px 12px 10px;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: flex-start;
         text-align: center;
-        transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+        box-shadow: 0 8px 18px rgba(17,28,34,0.02);
       }
-      .service-card:hover {
-        transform: translateY(-2px);
-        border-color: rgba(238,125,88,0.28);
-        box-shadow: 0 14px 26px rgba(17,34,41,0.05);
-      }
-      .service-photo {
-        width: 72px;
-        height: 72px;
-        border-radius: 9999px;
+      .service-avatar {
+        width: 62px;
+        height: 62px;
+        border-radius: 50%;
         overflow: hidden;
-        border: 1px solid rgba(19,45,58,0.08);
-        background: #ddd;
-        margin-bottom: 14px;
+        border: 1px solid rgba(19,42,56,0.08);
+        margin-bottom: 10px;
+        background: #d7d2cd;
       }
-      .service-photo img {
+      .service-avatar img {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        display: block;
       }
       .service-card h3 {
-        margin: 0 0 8px;
+        margin: 0;
+        font-size: 0.95rem;
+        line-height: 1.2;
+        letter-spacing: -0.02em;
         font-weight: 600;
-        font-size: 1rem;
-        line-height: 1.22;
-        color: var(--ink);
-        max-width: 170px;
       }
       .service-card p {
-        margin: 0;
-        color: rgba(19,45,58,0.72);
-        font-size: 0.76rem;
+        margin: 8px 0 0;
+        font-size: 0.72rem;
         line-height: 1.45;
+        color: rgba(19,42,56,0.72);
         font-weight: 300;
       }
-      .circle-arrow {
+      .small-pill {
+        margin-top: auto;
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        border: 1px solid rgba(19,42,56,0.12);
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        width: 36px;
-        height: 36px;
-        margin-top: auto;
-        border-radius: 9999px;
-        border: 1px solid rgba(19,45,58,0.12);
-        color: var(--ink);
-        font-size: 1.1rem;
-      }
-
-      .detail-row {
-        display: grid;
-        grid-template-columns: 1.08fr 1.12fr 0.84fr;
-        gap: 16px;
-        margin-top: 16px;
-        padding-bottom: 26px;
-      }
-      .detail-card {
-        position: relative;
-        overflow: hidden;
-        min-height: 420px;
-        border-radius: 30px;
-        border: 1px solid rgba(19,45,58,0.08);
-        box-shadow: 0 18px 34px rgba(17,34,41,0.05);
-      }
-      .detail-card img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        display: block;
-      }
-      .feature-cover::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(180deg, rgba(0,0,0,0.06), rgba(0,0,0,0.18));
-        z-index: 1;
-      }
-      .feature-text {
-        position: absolute;
-        left: 24px;
-        right: 24px;
-        bottom: 22px;
-        z-index: 2;
-        color: #f6f2ee;
-      }
-      .feature-text h2 {
-        margin: 0 0 18px;
-        font-family: 'Playfair Display', serif;
-        font-size: clamp(2.5rem, 3vw, 4.4rem);
-        line-height: 0.9;
-        letter-spacing: -0.07em;
-        color: #f4f2ee;
-      }
-      .small-btn {
-        display: inline-flex;
-        align-items: center;
-        gap: 10px;
-        padding: 0.8rem 1.2rem;
-        border-radius: 9999px;
-        background: rgba(255,255,255,0.12);
-        color: #f4f2ee;
-        border: 1px solid rgba(255,255,255,0.28);
-        font-size: 0.9rem;
-        font-weight: 600;
+        background: rgba(255,255,255,0.2);
+        font-size: 1rem;
         cursor: pointer;
       }
 
-      .plan-panel {
-        background: linear-gradient(180deg, rgba(244,214,184,0.78), rgba(255,255,255,0.72));
+      .lower-grid {
+        display: grid;
+        grid-template-columns: 1.08fr 1.12fr 0.86fr;
+        gap: 14px;
+        margin-top: 14px;
+        padding-bottom: 26px;
+      }
+      .lower-card {
+        border-radius: 28px;
+        overflow: hidden;
+        border: 1px solid rgba(19,42,56,0.08);
+        min-height: 400px;
+        background: #ddd;
+        position: relative;
+        box-shadow: 0 18px 34px rgba(17,28,34,0.04);
+      }
+      .lower-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+      }
+      .lower-card .large-text {
+        position: absolute;
+        left: 18px;
+        right: 18px;
+        bottom: 18px;
+        z-index: 2;
+        color: white;
+      }
+      .large-text h2 {
+        margin: 0 0 18px;
+        font-family: 'Playfair Display', serif;
+        font-size: clamp(2.4rem, 3vw, 4.6rem);
+        line-height: 0.9;
+        letter-spacing: -0.08em;
+        color: #f5f1eb;
+      }
+      .small-pill-inverse {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 0.75rem 1.2rem;
+        border-radius: 9999px;
+        border: 1px solid rgba(255,255,255,0.28);
+        background: rgba(255,255,255,0.12);
+        color: white;
+        font-size: 0.9rem;
+        font-weight: 600;
+      }
+
+      .plan-card {
+        background: linear-gradient(180deg, rgba(247, 210, 180, 0.8), rgba(255,255,255,0.8));
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 28px 18px;
+        padding: 26px 18px;
       }
-      .plan-content {
-        width: 100%;
-        max-width: 440px;
+      .plan-card .inner {
+        max-width: 450px;
       }
-      .mini-badge {
+      .plan-tag {
         display: inline-block;
-        margin-bottom: 12px;
         color: var(--orange);
-        font-size: 0.76rem;
         text-transform: uppercase;
         letter-spacing: 0.2em;
+        font-size: 0.72rem;
         font-weight: 700;
+        margin-bottom: 12px;
       }
-      .plan-content h2 {
+      .plan-card h2 {
         margin: 0 0 18px;
         font-family: 'Playfair Display', serif;
+        letter-spacing: -0.08em;
         font-size: clamp(2.5rem, 4vw, 5rem);
         line-height: 0.9;
-        letter-spacing: -0.07em;
+        color: var(--ink);
       }
-      .plan-content p {
+      .plan-card p {
         margin: 0 0 24px;
-        color: rgba(19,45,58,0.76);
         font-size: 1rem;
         line-height: 1.55;
+        color: rgba(19,42,56,0.76);
         font-weight: 300;
       }
-      .cta-main {
-        min-width: 0;
-        width: fit-content;
+      .cta-dark {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        min-height: 52px;
+        padding: 0.95rem 1.5rem;
+        border-radius: 14px;
+        background: rgba(19,42,56,0.96);
+        color: #fff;
+        font-weight: 600;
+        border: 1px solid rgba(19,42,56,0.12);
       }
 
-      .quote-panel {
-        background: linear-gradient(180deg, rgba(246,218,199,0.88), rgba(248,234,225,0.9));
-        padding: 32px 18px 22px;
+      .feature-card {
+        background: linear-gradient(180deg, rgba(242,214,192,0.9), rgba(250,239,232,0.88));
+        padding: 24px 20px 18px;
       }
-      .quote-mark {
-        margin: 0 0 18px;
+      .feature-card .quote {
         font-family: 'Playfair Display', serif;
-        font-size: clamp(3.5rem, 4vw, 5rem);
-        line-height: 0.8;
+        font-size: clamp(3.2rem, 4vw, 5rem);
+        line-height: 0.72;
         letter-spacing: -0.08em;
-        color: rgba(238,125,88,0.94);
+        color: rgba(238,124,88,0.92);
+        margin: 0 0 14px;
       }
-      .quote-list {
+      .feature-list {
         list-style: none;
-        padding: 0;
         margin: 0;
+        padding: 0;
         display: flex;
         flex-direction: column;
         gap: 10px;
       }
-      .quote-list li {
+      .feature-list li {
         display: flex;
         align-items: center;
         gap: 12px;
         color: var(--ink);
-        font-size: 0.88rem;
+        font-size: 0.87rem;
         font-weight: 500;
         line-height: 1.4;
       }
-      .feature-bullet {
+      .feature-list .dot {
         width: 30px;
         height: 30px;
-        border-radius: 9999px;
-        border: 1px solid rgba(19,45,58,0.12);
+        border-radius: 50%;
+        border: 1px solid rgba(19,42,56,0.12);
         background: rgba(255,255,255,0.32);
         display: inline-flex;
         align-items: center;
         justify-content: center;
-        font-size: 0.95rem;
+        font-size: 0.93rem;
       }
 
-      /* QUIZ STYLES */
-      .quiz-section {
-        background: linear-gradient(135deg, rgba(238,125,88,0.05), rgba(32,77,115,0.05));
-        border: 1px solid rgba(19,45,58,0.08);
-        border-radius: 30px;
-        padding: 40px 32px;
-        margin: 40px 0;
-      }
-
-      .quiz-header {
-        text-align: center;
-        margin-bottom: 36px;
-      }
-
-      .quiz-header h2 {
-        margin: 0 0 12px;
-        font-family: 'Playfair Display', serif;
-        font-size: clamp(2.2rem, 4vw, 4.2rem);
-        line-height: 1;
-        letter-spacing: -0.07em;
-        color: var(--ink);
-      }
-
-      .quiz-header p {
-        margin: 0;
-        color: rgba(19,45,58,0.76);
-        font-size: 1rem;
-        font-weight: 300;
-      }
-
-      .quiz-container {
-        max-width: 800px;
-        margin: 0 auto;
-      }
-
-      .quiz-progress {
-        margin-bottom: 32px;
-      }
-
-      .progress-bar {
-        height: 3px;
-        background: rgba(19,45,58,0.08);
-        border-radius: 9999px;
-        overflow: hidden;
-      }
-
-      .progress-fill {
-        height: 100%;
-        background: linear-gradient(90deg, var(--orange), var(--blue));
-        width: 0%;
-        transition: width 0.4s ease;
-      }
-
-      .quiz-steps {
-        position: relative;
-        min-height: 400px;
-      }
-
-      .quiz-step {
-        opacity: 0;
-        pointer-events: none;
-        position: absolute;
-        width: 100%;
-        transition: opacity 0.3s ease;
-      }
-
-      .quiz-step.active {
-        opacity: 1;
-        pointer-events: auto;
-        position: relative;
-      }
-
-      .quiz-step h3 {
-        margin: 0 0 24px;
-        font-size: 1.4rem;
-        font-weight: 600;
-        color: var(--ink);
-      }
-
-      .quiz-options {
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-        margin-bottom: 28px;
-      }
-
-      .quiz-option {
-        padding: 16px 20px;
-        border: 2px solid rgba(19,45,58,0.08);
-        background: rgba(255,255,255,0.5);
-        border-radius: 14px;
-        text-align: left;
-        color: var(--ink);
-        font-weight: 500;
-        cursor: pointer;
-        transition: all 0.2s ease;
-      }
-
-      .quiz-option:hover {
-        border-color: var(--orange);
-        background: rgba(255,255,255,0.8);
-      }
-
-      .quiz-option.selected {
-        border-color: var(--orange);
-        background: rgba(238,125,88,0.1);
-      }
-
-      .quiz-buttons {
-        display: flex;
-        justify-content: space-between;
-        gap: 12px;
-        margin-top: 28px;
-      }
-
-      .quiz-btn {
-        flex: 1;
-        padding: 12px 24px;
-        border: 1px solid rgba(19,45,58,0.12);
-        background: rgba(255,255,255,0.6);
-        border-radius: 12px;
-        cursor: pointer;
-        font-weight: 600;
-        transition: all 0.2s ease;
-      }
-
-      .quiz-btn.next {
-        background: var(--orange);
-        color: white;
-        flex: 0.5;
-      }
-
-      .quiz-btn:hover {
-        transform: translateY(-1px);
-      }
-
-      .quiz-success {
-        text-align: center;
-        padding: 40px;
-      }
-
-      .quiz-success-icon {
-        width: 80px;
-        height: 80px;
-        margin: 0 auto 24px;
-        background: rgba(238,125,88,0.1);
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 2rem;
-      }
-
-      .quiz-success h3 {
-        margin: 0 0 12px;
-        font-family: 'Playfair Display', serif;
-        font-size: 2.2rem;
-        color: var(--ink);
-      }
-
-      .quiz-success p {
-        margin: 0 0 24px;
-        color: rgba(19,45,58,0.72);
-        font-size: 1rem;
-        line-height: 1.6;
-      }
-
-      /* Footer */
       .footer-band {
-        margin-top: 10px;
-        background: rgba(16,42,57,0.96);
-        border-radius: 24px 24px 0 0;
-        padding: 26px 0 22px;
-        color: #f3efe9;
+        margin-top: 12px;
+        background: rgba(17,45,60,0.96);
+        border-radius: 22px 22px 0 0;
+        padding: 24px 0 20px;
       }
       .footer-grid {
         display: grid;
-        grid-template-columns: 1.7fr repeat(5, minmax(0, 1fr));
+        grid-template-columns: 1.5fr repeat(5, minmax(0,1fr));
         gap: 18px;
         align-items: start;
       }
@@ -741,29 +568,27 @@
         display: flex;
         align-items: center;
         gap: 12px;
-        margin-bottom: 10px;
       }
-      .footer-brand .brand-mark { background: #f0ede9; }
-      .footer-brand .brand-text {
-        color: #f3efe9;
-        font-size: clamp(1.4rem, 1.2vw, 1.85rem);
+      .footer-brand .brand-name {
+        color: #f9f1e8;
+        font-size: clamp(1.5rem, 1.2vw, 2rem);
       }
-      .footer-brand .brand-text .wellness { color: var(--gold); }
+      .footer-brand .brand-name .wellness { color: var(--gold); }
       .footer-copy {
-        max-width: 220px;
-        color: rgba(255,255,255,0.72);
-        font-size: 0.7rem;
-        letter-spacing: 0.14em;
-        line-height: 1.7;
+        color: rgba(255,255,255,0.7);
+        font-size: 0.68rem;
+        letter-spacing: 0.15em;
         text-transform: uppercase;
-        margin-top: 14px;
+        margin-top: 12px;
+        max-width: 220px;
+        line-height: 1.7;
       }
       .footer-col h4 {
         margin: 0 0 10px;
-        font-size: 0.7rem;
-        letter-spacing: 0.2em;
+        color: rgba(255,255,255,0.9);
+        font-size: 0.72rem;
+        letter-spacing: 0.18em;
         text-transform: uppercase;
-        color: rgba(255,255,255,0.92);
         font-weight: 700;
       }
       .footer-col span {
@@ -774,43 +599,40 @@
       }
 
       @media (max-width: 1180px) {
-        .hero-inner { grid-template-columns: 1fr; min-height: auto; }
-        .service-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
-        .detail-row { grid-template-columns: 1fr; }
-        .footer-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+        .hero-grid { grid-template-columns: 1fr; }
+        .collage-wrap { min-height: 620px; }
+        .service-row { grid-template-columns: repeat(5, minmax(0,1fr)); }
+        .lower-grid { grid-template-columns: 1fr; }
+        .footer-grid { grid-template-columns: repeat(3, minmax(0,1fr)); }
       }
-      @media (max-width: 840px) {
+      @media (max-width: 860px) {
         .nav { display: none; }
         .header-inner { justify-content: space-between; }
-        .hero-title { font-size: clamp(3.5rem, 18vw, 7rem); }
-        .service-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-        .footer-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        .service-row { grid-template-columns: repeat(2, minmax(0,1fr)); }
       }
       @media (max-width: 560px) {
-        .container { padding-left: 10px; padding-right: 10px; }
-        .cta-row { flex-direction: column; }
-        .btn-primary, .btn-secondary, .header-btn, .cta-main, .cta-ghost { width: 100%; }
-        .hero-collage { grid-template-columns: 1fr; grid-template-rows: repeat(4, minmax(180px, 1fr)); }
-        .tile-1, .tile-2, .tile-3, .tile-4 { grid-column: 1; }
-        .tile-1 { grid-row: 1; }
-        .tile-2 { grid-row: 2; }
-        .tile-3 { grid-row: 3; }
-        .tile-4 { grid-row: 4; }
-        .service-grid { grid-template-columns: 1fr; }
+        .page-shell { padding-left: 10px; padding-right: 10px; }
+        .hero-actions { flex-direction: column; }
+        .primary-btn, .secondary-btn, .header-cta, .cta-dark { width: 100%; }
+        .hero-grid { min-height: auto; }
+        .collage-wrap { grid-template-columns: 1fr; grid-template-rows: repeat(4, minmax(180px,1fr)); }
+        .card-a, .card-b, .card-c, .card-d { grid-column: 1; }
+        .card-a { grid-row: 1; }
+        .card-b { grid-row: 2; }
+        .card-c { grid-row: 3; }
+        .card-d { grid-row: 4; }
+        .service-row { grid-template-columns: 1fr; }
         .footer-grid { grid-template-columns: 1fr; }
-        .quiz-section { padding: 24px 16px; }
-        .quiz-buttons { flex-direction: column; }
-        .quiz-btn { flex: 1 !important; }
       }
     </style>
   </head>
   <body>
     <header class="site-header">
-      <div class="container">
+      <div class="page-shell">
         <div class="header-inner">
-          <div class="brand-wrap" aria-label="Be Fehr Wellness brand">
+          <div class="brand" aria-label="Be Fehr Wellness logo">
             <div class="brand-mark" aria-hidden="true"></div>
-            <div class="brand-text">be fehr <span class="wellness">wellness</span></div>
+            <div class="brand-name">be fehr <span class="wellness">wellness</span></div>
           </div>
 
           <nav class="nav" aria-label="Main navigation">
@@ -821,7 +643,7 @@
             <a href="#">For Clinicians</a>
           </nav>
 
-          <button class="header-btn" onclick="scrollToQuiz()" type="button">
+          <button class="header-cta" type="button">
             <span>Get Started</span>
             <span aria-hidden="true">→</span>
           </button>
@@ -829,316 +651,185 @@
       </div>
     </header>
 
-    <main class="container">
-      <section class="hero-shell">
-        <div class="hero-inner">
+    <main class="page-shell">
+      <section class="hero">
+        <div class="hero-grid">
           <div class="hero-copy">
-            <div class="eyebrow">Mental Health For Real Life</div>
-            <h1 class="hero-title">
-              You care
-              <span class="highlight">for real life.</span>
+            <div class="eyebrow">Mental Health for Real Life</div>
+            <h1 class="hero-headline">
+              <span>Your care.</span>
+              <span class="sub">Your plan.</span>
             </h1>
-            <p class="hero-sub">
-              Therapy, psychiatric care, specialized treatments, groups, and wellness support — in a welcoming,
-              inclusive space, in person or online.
+            <p class="hero-body">
+              Therapy, psychiatric care, specialized treatments, groups, and wellness support — in a welcoming, inclusive space, in person or online.
             </p>
-
-            <div class="cta-row">
-              <button class="btn-primary" onclick="scrollToQuiz()" type="button">Explore Our Services <span aria-hidden="true">→</span></button>
-              <button class="btn-secondary" onclick="scrollToQuiz()" type="button">Take the Care Plan Quiz</button>
+            <div class="hero-actions">
+              <button class="primary-btn" type="button">Explore Our Services <span aria-hidden="true">→</span></button>
+              <button class="secondary-btn" type="button">Take the Care Plan Quiz</button>
             </div>
           </div>
 
-          <div class="hero-collage" aria-label="Wellness collage">
-            <div class="shape shape-a"></div>
-            <div class="shape shape-b"></div>
-            <div class="shape shape-c"></div>
-            <div class="shape shape-d"></div>
-            <div class="shape shape-e"></div>
-            <div class="shape shape-f"></div>
+          <div class="collage-wrap" aria-label="Wellness collage">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="shape shape-4"></div>
+            <div class="shape shape-5"></div>
+            <div class="shape shape-6"></div>
 
-            <div class="photo-card tile-1">
-              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=1200&q=80" alt="Diverse person outdoors with warm smile" />
-            </div>
-
-            <div class="photo-card tile-2">
-              <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1200&q=80" alt="Happy person of color in sunlight" />
-            </div>
-
-            <div class="photo-card tile-3">
-              <div class="overlay-script">
+            <div class="mini-rail">
+              <div class="mini-panel text-box">
                 <div>
-                  <span class="mini">Care</span>
+                  <span>Different</span>
+                  <span>people.</span>
+                  <span>same</span>
+                  <span>support.</span>
+                  <div class="rule"></div>
+                  <span style="font-size:0.68rem; letter-spacing:0.14em; font-weight:600;">In Fort Lauderdale<br />and online.</span>
+                </div>
+              </div>
+              <div class="mini-panel"><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=900&q=80" alt="Beach city view" /></div>
+              <div class="mini-panel"><img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=900&q=80" alt="Family smiling" /></div>
+            </div>
+
+            <div class="photo-card card-a">
+              <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1200&q=80" alt="Palm trees and tropical lifestyle" />
+            </div>
+
+            <div class="photo-card card-b">
+              <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=1200&q=80" alt="Smiling woman with sunglasses" />
+            </div>
+
+            <div class="photo-card card-c">
+              <div class="script-overlay">
+                <div>
+                  <span class="small">Care</span>
                   Without<br />
                   Limits
                 </div>
               </div>
-              <img src="https://images.unsplash.com/photo-1516627145497-ae6ab60908c9?auto=format&fit=crop&w=900&q=80" alt="Diverse couple together" />
+              <img src="https://images.unsplash.com/photo-1516627145497-ae6ab60908c9?auto=format&fit=crop&w=900&q=80" alt="Family and parent" />
             </div>
 
-            <div class="photo-card tile-4">
-              <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80" alt="Beach and ocean" />
+            <div class="photo-card card-d">
+              <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80" alt="Beach ocean view" />
             </div>
           </div>
         </div>
       </section>
 
-      <section class="service-grid" aria-label="Services">
+      <section class="service-row" aria-label="Services">
         <article class="service-card">
-          <div class="service-photo">
-            <img src="https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?auto=format&fit=crop&w=500&q=80" alt="Individual therapy - person of color" />
-          </div>
+          <div class="service-avatar"><img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=500&q=80" alt="Individual therapy" /></div>
           <h3>Individual Therapy</h3>
           <p>Support for what you're carrying.</p>
-          <div class="circle-arrow">→</div>
+          <div class="small-pill">→</div>
         </article>
 
         <article class="service-card">
-          <div class="service-photo">
-            <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=500&q=80" alt="Couples therapy - diverse couple" />
-          </div>
+          <div class="service-avatar"><img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=500&q=80" alt="Couples therapy" /></div>
           <h3>Couples Therapy</h3>
-          <p>Stronger connection and trust.</p>
-          <div class="circle-arrow">→</div>
+          <p>Stronger connections.</p>
+          <div class="small-pill">→</div>
         </article>
 
         <article class="service-card">
-          <div class="service-photo">
-            <img src="https://images.unsplash.com/photo-1516627145497-ae6ab60908c9?auto=format&fit=crop&w=500&q=80" alt="Family therapy - diverse family" />
-          </div>
+          <div class="service-avatar"><img src="https://images.unsplash.com/photo-1516627145497-ae6ab60908c9?auto=format&fit=crop&w=500&q=80" alt="Family therapy" /></div>
           <h3>Family Therapy</h3>
           <p>Support for every stage.</p>
-          <div class="circle-arrow">→</div>
+          <div class="small-pill">→</div>
         </article>
 
         <article class="service-card">
-          <div class="service-photo">
-            <img src="https://images.unsplash.com/photo-1503803735170-ce289e8b56e8?auto=format&fit=crop&w=500&q=80" alt="Children and teens - diverse youth" />
-          </div>
+          <div class="service-avatar"><img src="https://images.unsplash.com/photo-1503803735170-ce289e8b56e8?auto=format&fit=crop&w=500&q=80" alt="Children and teens" /></div>
           <h3>Children &amp; Teens</h3>
-          <p>Safe spaces to grow and feel seen.</p>
-          <div class="circle-arrow">→</div>
+          <p>Safe spaces to grow.</p>
+          <div class="small-pill">→</div>
         </article>
 
         <article class="service-card">
-          <div class="service-photo">
-            <img src="https://images.unsplash.com/photo-1537368310519-f46fbc4f24f3?auto=format&fit=crop&w=500&q=80" alt="Psychiatric medication - healthcare provider" />
-          </div>
+          <div class="service-avatar"><img src="https://images.unsplash.com/photo-1537368310519-f46fbc4f24f3?auto=format&fit=crop&w=500&q=80" alt="Psychiatric medication" /></div>
           <h3>Psychiatric Medication Management</h3>
           <p>Thoughtful, personalized care.</p>
-          <div class="circle-arrow">→</div>
+          <div class="small-pill">→</div>
         </article>
 
         <article class="service-card">
-          <div class="service-photo">
-            <img src="https://images.unsplash.com/photo-1576091160550-112173f7f869?auto=format&fit=crop&w=500&q=80" alt="Spravato care - wellness treatment" />
-          </div>
+          <div class="service-avatar"><img src="https://images.unsplash.com/photo-1576091160550-112173f7f869?auto=format&fit=crop&w=500&q=80" alt="Spravato treatment" /></div>
           <h3>Spravato® Treatment</h3>
           <p>A different path forward.</p>
-          <div class="circle-arrow">→</div>
+          <div class="small-pill">→</div>
         </article>
 
         <article class="service-card">
-          <div class="service-photo">
-            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=500&q=80" alt="Sexual wellness - pride and inclusion" />
-          </div>
+          <div class="service-avatar"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=500&q=80" alt="Sexual wellness" /></div>
           <h3>Sexual Wellness &amp; Testing</h3>
           <p>Testing, PrEP, PEP, and more.</p>
-          <div class="circle-arrow">→</div>
+          <div class="small-pill">→</div>
         </article>
 
         <article class="service-card">
-          <div class="service-photo">
-            <img src="https://images.unsplash.com/photo-1517457373614-b7152f800fd1?auto=format&fit=crop&w=500&q=80" alt="Groups - community support" />
-          </div>
+          <div class="service-avatar"><img src="https://images.unsplash.com/photo-1517457373614-b7152f800fd1?auto=format&fit=crop&w=500&q=80" alt="Groups" /></div>
           <h3>Groups</h3>
           <p>Community and real change.</p>
-          <div class="circle-arrow">→</div>
+          <div class="small-pill">→</div>
         </article>
 
         <article class="service-card">
-          <div class="service-photo">
-            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=500&q=80" alt="Senior care - elder wellness" />
-          </div>
+          <div class="service-avatar"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=500&q=80" alt="Senior care" /></div>
           <h3>Senior Care</h3>
           <p>Compassionate support for aging well.</p>
-          <div class="circle-arrow">→</div>
+          <div class="small-pill">→</div>
         </article>
 
         <article class="service-card">
-          <div class="service-photo">
-            <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=500&q=80" alt="Care plan - personalized pathway" />
-          </div>
+          <div class="service-avatar"><img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=500&q=80" alt="Care plan" /></div>
           <h3>Care Plan</h3>
-          <p>Build your path with expert guidance.</p>
-          <div class="circle-arrow">→</div>
+          <p>Build your path with guidance.</p>
+          <div class="small-pill">→</div>
         </article>
       </section>
 
-      <section class="detail-row" aria-label="Care and support details">
-        <div class="detail-card feature-cover">
-          <img src="https://images.unsplash.com/photo-1552058544-f906b5519c7f?auto=format&fit=crop&w=1200&q=80" alt="Diverse group in wellness setting" />
-          <div class="feature-text">
+      <section class="lower-grid" aria-label="Support details and benefits">
+        <div class="lower-card" style="background: linear-gradient(180deg, rgba(0,0,0,0.08), rgba(0,0,0,0.2));">
+          <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80" alt="Palm tree beach" />
+          <div class="large-text">
             <h2>Care that meets you where you are.</h2>
-            <div class="small-btn">Our Approach <span aria-hidden="true">→</span></div>
+            <div class="small-pill-inverse">Our Approach <span aria-hidden="true">→</span></div>
           </div>
         </div>
 
-        <div class="detail-card plan-panel">
-          <div class="plan-content">
-            <div class="mini-badge">Build your plan</div>
-            <h2>Build your care plan.</h2>
-            <p>
-              Take a short quiz and we'll help you find the right services for your goals, needs, and lifestyle.
-            </p>
-            <button class="cta-main" onclick="scrollToQuiz()" type="button">Take the Care Plan Quiz <span aria-hidden="true">→</span></button>
+        <div class="lower-card plan-card">
+          <div class="inner">
+            <div class="plan-tag">Build your plan</div>
+            <h2>Build your<br />care plan.</h2>
+            <p>Take a short quiz and we'll help you find the right services for your goals, needs, and lifestyle.</p>
+            <button class="cta-dark" type="button">Take the Care Plan Quiz <span aria-hidden="true">→</span></button>
           </div>
         </div>
 
-        <div class="detail-card quote-panel">
-          <div class="quote-mark">"</div>
-          <ul class="quote-list">
-            <li><span class="feature-bullet">✓</span> <span>Evidence-Based Care</span></li>
-            <li><span class="feature-bullet">✓</span> <span>Inclusive &amp; Affirming</span></li>
-            <li><span class="feature-bullet">✓</span> <span>Whole-Person Approach</span></li>
-            <li><span class="feature-bullet">✓</span> <span>In Person or Telehealth</span></li>
-            <li><span class="feature-bullet">✓</span> <span>Community Focused</span></li>
+        <div class="lower-card feature-card">
+          <div class="quote">“</div>
+          <ul class="feature-list">
+            <li><span class="dot">✓</span> Evidence-Based Care</li>
+            <li><span class="dot">✓</span> Inclusive &amp; Affirming</li>
+            <li><span class="dot">✓</span> Whole-Person Approach</li>
+            <li><span class="dot">✓</span> In Person or Telehealth</li>
+            <li><span class="dot">✓</span> Community Focused</li>
           </ul>
-        </div>
-      </section>
-
-      <!-- DIAGNOSTIC INTAKE QUIZ -->
-      <section class="quiz-section" id="quiz-section">
-        <div class="quiz-container">
-          <div class="quiz-header">
-            <span class="eyebrow" style="display: inline-block;">Diagnostic Intake</span>
-            <h2>Let's build a plan that works for you.</h2>
-            <p>Complete this comprehensive clinical assessment to help our team tailor your therapeutic or psychiatric care pathway.</p>
-          </div>
-
-          <div class="quiz-progress">
-            <div class="progress-bar">
-              <div class="progress-fill" id="progressFill"></div>
-            </div>
-          </div>
-
-          <div class="quiz-steps">
-            <!-- Step 1: Primary Focus -->
-            <div class="quiz-step active" id="step-0">
-              <h3>What is your primary focus for care?</h3>
-              <div class="quiz-options">
-                <button class="quiz-option" onclick="selectOption(this, 0)">Counseling &amp; Mental Health</button>
-                <button class="quiz-option" onclick="selectOption(this, 0)">Holistic Primary Care</button>
-                <button class="quiz-option" onclick="selectOption(this, 0)">Specialty Wellness</button>
-                <button class="quiz-option" onclick="selectOption(this, 0)">Sexual Health &amp; Testing</button>
-              </div>
-              <div class="quiz-buttons">
-                <button class="quiz-btn next" onclick="nextStep()">Continue →</button>
-              </div>
-            </div>
-
-            <!-- Step 2: Timeline -->
-            <div class="quiz-step" id="step-1">
-              <h3>What is your current timeline or urgency?</h3>
-              <div class="quiz-options">
-                <button class="quiz-option" onclick="selectOption(this, 1)">Routine / Preventative</button>
-                <button class="quiz-option" onclick="selectOption(this, 1)">Less than a month</button>
-                <button class="quiz-option" onclick="selectOption(this, 1)">1 to 6 months</button>
-                <button class="quiz-option" onclick="selectOption(this, 1)">Over 6 months / Chronic</button>
-              </div>
-              <div class="quiz-buttons">
-                <button class="quiz-btn" onclick="prevStep()">← Back</button>
-                <button class="quiz-btn next" onclick="nextStep()">Continue →</button>
-              </div>
-            </div>
-
-            <!-- Step 3: Goals -->
-            <div class="quiz-step" id="step-2">
-              <h3>What is your primary goal for this visit?</h3>
-              <div class="quiz-options">
-                <button class="quiz-option" onclick="selectOption(this, 2)">Optimization &amp; Prevention</button>
-                <button class="quiz-option" onclick="selectOption(this, 2)">Symptom Management</button>
-                <button class="quiz-option" onclick="selectOption(this, 2)">Deep Healing &amp; Relief</button>
-              </div>
-              <div class="quiz-buttons">
-                <button class="quiz-btn" onclick="prevStep()">← Back</button>
-                <button class="quiz-btn next" onclick="nextStep()">Continue →</button>
-              </div>
-            </div>
-
-            <!-- Step 4: Treatment History -->
-            <div class="quiz-step" id="step-3">
-              <h3>Have you previously sought treatment?</h3>
-              <div class="quiz-options">
-                <button class="quiz-option" onclick="selectOption(this, 3)">No, first time seeking care</button>
-                <button class="quiz-option" onclick="selectOption(this, 3)">Yes, standard medical care</button>
-                <button class="quiz-option" onclick="selectOption(this, 3)">Yes, talk therapy or counseling</button>
-                <button class="quiz-option" onclick="selectOption(this, 3)">Yes, multiple psychiatric meds without success</button>
-              </div>
-              <div class="quiz-buttons">
-                <button class="quiz-btn" onclick="prevStep()">← Back</button>
-                <button class="quiz-btn next" onclick="nextStep()">Continue →</button>
-              </div>
-            </div>
-
-            <!-- Step 5: Programs -->
-            <div class="quiz-step" id="step-4">
-              <h3>Select the specific program you are interested in:</h3>
-              <div class="quiz-options">
-                <button class="quiz-option" onclick="selectOption(this, 4, true)">Therapy &amp; Psychiatric Care</button>
-                <button class="quiz-option" onclick="selectOption(this, 4, true)">Holistic Primary Care</button>
-                <button class="quiz-option" onclick="selectOption(this, 4, true)">Peptides, Vitamins &amp; Supplements</button>
-                <button class="quiz-option" onclick="selectOption(this, 4, true)">STD, STI &amp; HIV Testing (PEP/PrEP)</button>
-              </div>
-              <div class="quiz-buttons">
-                <button class="quiz-btn" onclick="prevStep()">← Back</button>
-                <button class="quiz-btn next" onclick="nextStep()">Continue →</button>
-              </div>
-            </div>
-
-            <!-- Step 6: Contact Info -->
-            <div class="quiz-step" id="step-5">
-              <h3>Let's secure your care plan.</h3>
-              <p style="color: rgba(19,45,58,0.72); margin-bottom: 20px;">Where should our clinical coordinator send your confidential triage results?</p>
-              <div class="quiz-options" style="gap: 16px;">
-                <input type="text" placeholder="Legal First &amp; Last Name" style="padding: 12px 16px; border: 1px solid rgba(19,45,58,0.12); border-radius: 12px; font-size: 1rem;" />
-                <input type="email" placeholder="Email Address" style="padding: 12px 16px; border: 1px solid rgba(19,45,58,0.12); border-radius: 12px; font-size: 1rem;" />
-                <input type="tel" placeholder="Phone Number" style="padding: 12px 16px; border: 1px solid rgba(19,45,58,0.12); border-radius: 12px; font-size: 1rem;" />
-              </div>
-              <div class="quiz-buttons">
-                <button class="quiz-btn" onclick="prevStep()">← Back</button>
-                <button class="quiz-btn next" onclick="completeQuiz()">Submit &amp; Analyze →</button>
-              </div>
-            </div>
-
-            <!-- Success State -->
-            <div class="quiz-step" id="step-6">
-              <div class="quiz-success">
-                <div class="quiz-success-icon">✓</div>
-                <h3>Profile Analyzed.</h3>
-                <p>
-                  Based on your detailed assessment, our clinical team is preparing a customized care pathway. A Be Fehr intake coordinator will contact you shortly to discuss your tailored options and verify benefits.
-                </p>
-                <p style="margin-top: 24px; font-weight: 600;">
-                  Need immediate assistance? <br/>
-                  <a href="tel:954-600-0551" style="color: var(--orange);">954-600-0551</a>
-                </p>
-              </div>
-            </div>
-          </div>
         </div>
       </section>
     </main>
 
     <footer class="footer-band">
-      <div class="container">
+      <div class="page-shell">
         <div class="footer-grid">
           <div>
             <div class="footer-brand">
               <div class="brand-mark" aria-hidden="true"></div>
-              <div class="brand-text">be fehr <span class="wellness">wellness</span></div>
+              <div class="brand-name">be fehr <span class="wellness">wellness</span></div>
             </div>
-            <div class="footer-copy">Mental Health For Real Life</div>
+            <div class="footer-copy">Mental Health for Real Life</div>
           </div>
 
           <div class="footer-col">
@@ -1173,56 +864,5 @@
         </div>
       </div>
     </footer>
-
-    <script>
-      let currentStep = 0;
-      const totalSteps = 6;
-
-      function scrollToQuiz() {
-        document.getElementById('quiz-section').scrollIntoView({ behavior: 'smooth' });
-      }
-
-      function updateProgress() {
-        const progress = ((currentStep + 1) / (totalSteps + 1)) * 100;
-        document.getElementById('progressFill').style.width = progress + '%';
-      }
-
-      function selectOption(button, stepIndex, isMulti = false) {
-        if (!isMulti) {
-          const siblings = button.parentElement.querySelectorAll('.quiz-option');
-          siblings.forEach(sibling => sibling.classList.remove('selected'));
-        }
-        button.classList.add('selected');
-      }
-
-      function nextStep() {
-        if (currentStep < totalSteps) {
-          document.getElementById(`step-${currentStep}`).classList.remove('active');
-          currentStep++;
-          document.getElementById(`step-${currentStep}`).classList.add('active');
-          updateProgress();
-          window.scrollTo({ top: document.querySelector('.quiz-section').offsetTop - 100, behavior: 'smooth' });
-        }
-      }
-
-      function prevStep() {
-        if (currentStep > 0) {
-          document.getElementById(`step-${currentStep}`).classList.remove('active');
-          currentStep--;
-          document.getElementById(`step-${currentStep}`).classList.add('active');
-          updateProgress();
-        }
-      }
-
-      function completeQuiz() {
-        document.getElementById(`step-${currentStep}`).classList.remove('active');
-        currentStep++;
-        document.getElementById(`step-${currentStep}`).classList.add('active');
-        updateProgress();
-        window.scrollTo({ top: document.querySelector('.quiz-section').offsetTop - 100, behavior: 'smooth' });
-      }
-
-      updateProgress();
-    </script>
   </body>
 </html>
